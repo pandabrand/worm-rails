@@ -42,8 +42,18 @@ class CdgOrder < ApplicationRecord
   end
 
   def ilm_desc
-    @created = approval.date_created.strftime '%Y-%m-%d'
-    @submitted = date_submitted.strftime '%Y-%m-%d'
+    if approval.nil?
+      @created = 'empty'
+    else
+      @created = approval.date_created.strftime '%Y-%m-%d'
+    end
+
+    if date_submitted.nil?
+      @submitted
+    else
+      @submitted = date_submitted.strftime '%Y-%m-%d'
+    end
+
     'headline-' + cdg_template.headline.title + '-approval-' + @created + '-submitted-' + @submitted
   end
 end

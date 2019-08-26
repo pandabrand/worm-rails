@@ -13,7 +13,7 @@ xml.SUBMISSION(
     xml.ILM_EON_ID '24944'
     xml.ILM_RCC('code' => 'ENS150') do
       xml.ILM_ISO_COUNTRY 'USA'
-      xml.ILM_REC_DT @cdg_order.approval.ilm_rec_dt
+      xml.ILM_REC_DT @cdg_order.approval.nil? ? '' : @cdg_order.approval.ilm_rec_dt
       xml.LDAP_GROUP 'adbuilder_era_archive_uat_access'
       xml.ILM_COST_CTR_NO '575440'
       xml.ILM_INFO_SEC_CLASS 'CONFIDENTIAL'

@@ -9,28 +9,13 @@
 <table>
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Contact email address</th>
-      <th>Contact name</th>
-      <th>Contact phone</th>
-      <th>Cost</th>
-      <th>Date created</th>
-      <th>Materials close date</th>
-      <th>Publication name</th>
-      <th>Run date</th>
-      <th>Seminar date time</th>
-      <th>Seminar location</th>
-      <th>Speaker name and title</th>
-      <th>Advisor name</th>
-      <th>Advisor phone</th>
-      <th>Branch address1</th>
-      <th>Branch city</th>
-      <th>Is active</th>
-      <th>Comments</th>
-      <th>Date downloaded</th>
-      <th>Date submitted</th>
+      <th>Order ID</th>
+      <th>Status</th>
       <th>WORM Status</th>
-      <th>View</th>
+      <th>File</th>
+      <th>ARF</th>
+      <th>WORM File</th>
+      <th>ARF WORM File</th>
     </tr>
   </thead>
 
@@ -38,31 +23,13 @@
     <% @cdg_orders.each do |cdg_order| %>
       <tr>
         <td><%= cdg_order.pk_id %></td>
-        <td><%= cdg_order.contact_email_address %></td>
-        <td><%= cdg_order.contact_name %></td>
-        <td><%= cdg_order.contact_phone %></td>
-        <td><%= cdg_order.cost %></td>
-        <td><%= cdg_order.date_created %></td>
-        <td><%= cdg_order.materials_close_date %></td>
-        <td><%= cdg_order.publication_name %></td>
-        <td><%= cdg_order.run_date %></td>
-        <td><%= cdg_order.seminar_date_time %></td>
-        <td><%= cdg_order.seminar_location %></td>
-        <td><%= cdg_order.speaker_name_and_title %></td>
-        <td><%= cdg_order.advisor_name %></td>
-        <td><%= cdg_order.advisor_phone %></td>
-        <td><%= cdg_order.branch_address1 %></td>
-        <td><%= cdg_order.branch_city %></td>
-        <td><%= cdg_order.is_active %></td>
-        <td><%= cdg_order.comments %></td>
-        <td><%= cdg_order.date_downloaded %></td>
-        <td><%= cdg_order.date_submitted %></td>
+        <td><%= cdg_order.cdg_order_status.nil? ? '' : cdg_order.cdg_order_status.name %></td>
         <td><%= cdg_order.worm_status %></td>
-        <td><%= link_to 'Show', cdg_order %></td>
+        <td><%= link_to 'File', cdg_order_path(cdg_order, :format => :xml) %></td>
+        <td><%= link_to 'ARF', :action => 'arf', :controller => 'cdg_orders', :id => cdg_order.id, :format => :pdf %></td>
+        <td><%= link_to 'WORM', cdg_order_path(cdg_order, :format => :xml) %></td>
+        <td><%= link_to 'ARF WORM', :action => 'arf', :controller => 'cdg_orders', :id => cdg_order.id, :format => :xml %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-<%= link_to 'New Cdg Order', new_cdg_order_path %>
