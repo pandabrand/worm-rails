@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_required: MyString
+  excel_col_name: MyString
+  excel_col_number: 1
+  type: 
+
+two:
+  is_required: MyString
+  excel_col_name: MyString
+  excel_col_number: 1
+  type: 

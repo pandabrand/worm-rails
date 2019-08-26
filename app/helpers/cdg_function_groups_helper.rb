@@ -1,0 +1,2 @@
+module CdgFunctionGroupsHelper
+end

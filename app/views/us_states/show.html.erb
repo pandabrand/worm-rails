@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @us_state.sort_order %>
+</p>
+
+<p>
+  <strong>Abbreviation:</strong>
+  <%= @us_state.abbreviation %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @us_state.name %>
+</p>
+
+<%= link_to 'Edit', edit_us_state_path(@us_state) %> |
+<%= link_to 'Back', us_states_path %>

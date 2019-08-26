@@ -1,0 +1,2 @@
+class DataRefType < ApplicationRecord
+end

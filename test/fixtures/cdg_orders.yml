@@ -1,0 +1,87 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contact_email_address: MyString
+  contact_name: MyString
+  contact_phone: MyString
+  cost: 9.99
+  date_created: 2019-06-12 22:09:39
+  fk_creator: one
+  fk_publication_type: one
+  materials_close_date: 2019-06-12 22:09:39
+  publication_name: MyString
+  run_date: 2019-06-12 22:09:39
+  seminar_date_time: 2019-06-12 22:09:39
+  seminar_location: MyString
+  speaker_name_and_title: MyString
+  advisor_name: MyString
+  fk_advisor_title: one
+  advisor_phone: MyString
+  branch_address1: MyString
+  branch_city: MyString
+  fk_branch_state: one
+  fk_template: one
+  fk_ad_size: one
+  is_active: MyString
+  comments: MyText
+  date_downloaded: 2019-06-12 22:09:39
+  date_submitted: 2019-06-12 22:09:39
+  fk_order_status: one
+  branch_address2: MyString
+  branch_zip: MyString
+  branch: one
+  branch_name: MyString
+  fk_source_branch: one
+  fk_headline: one
+  last_saved_page_name: MyString
+  hi_res_uri: MyString
+  last_preview: MyString
+  fk_area: one
+  fk_region: one
+  fk_branch: one
+  is_legacy: MyString
+  fk_assistant: one
+  faURL: MyString
+
+two:
+  contact_email_address: MyString
+  contact_name: MyString
+  contact_phone: MyString
+  cost: 9.99
+  date_created: 2019-06-12 22:09:39
+  fk_creator: two
+  fk_publication_type: two
+  materials_close_date: 2019-06-12 22:09:39
+  publication_name: MyString
+  run_date: 2019-06-12 22:09:39
+  seminar_date_time: 2019-06-12 22:09:39
+  seminar_location: MyString
+  speaker_name_and_title: MyString
+  advisor_name: MyString
+  fk_advisor_title: two
+  advisor_phone: MyString
+  branch_address1: MyString
+  branch_city: MyString
+  fk_branch_state: two
+  fk_template: two
+  fk_ad_size: two
+  is_active: MyString
+  comments: MyText
+  date_downloaded: 2019-06-12 22:09:39
+  date_submitted: 2019-06-12 22:09:39
+  fk_order_status: two
+  branch_address2: MyString
+  branch_zip: MyString
+  branch: two
+  branch_name: MyString
+  fk_source_branch: two
+  fk_headline: two
+  last_saved_page_name: MyString
+  hi_res_uri: MyString
+  last_preview: MyString
+  fk_area: two
+  fk_region: two
+  fk_branch: two
+  is_legacy: MyString
+  fk_assistant: two
+  faURL: MyString

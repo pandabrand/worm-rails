@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fk area:</strong>
+  <%= @lab_complex.fk_area %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @lab_complex.is_active %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lab_complex.name %>
+</p>
+
+<p>
+  <strong>Area name:</strong>
+  <%= @lab_complex.area_name %>
+</p>
+
+<p>
+  <strong>Complex:</strong>
+  <%= @lab_complex.complex %>
+</p>
+
+<%= link_to 'Edit', edit_lab_complex_path(@lab_complex) %> |
+<%= link_to 'Back', lab_complexes_path %>

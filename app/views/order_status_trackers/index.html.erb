@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Order Status Trackers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fk order status</th>
+      <th>Date submitted</th>
+      <th>Fk order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order_status_trackers.each do |order_status_tracker| %>
+      <tr>
+        <td><%= order_status_tracker.fk_order_status %></td>
+        <td><%= order_status_tracker.date_submitted %></td>
+        <td><%= order_status_tracker.fk_order %></td>
+        <td><%= link_to 'Show', order_status_tracker %></td>
+        <td><%= link_to 'Edit', edit_order_status_tracker_path(order_status_tracker) %></td>
+        <td><%= link_to 'Destroy', order_status_tracker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order Status Tracker', new_order_status_tracker_path %>

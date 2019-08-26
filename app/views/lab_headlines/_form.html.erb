@@ -1,0 +1,62 @@
+<%= form_with(model: lab_headline, local: true) do |form| %>
+  <% if lab_headline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lab_headline.errors.count, "error") %> prohibited this lab_headline from being saved:</h2>
+
+      <ul>
+      <% lab_headline.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fk_template %>
+    <%= form.number_field :fk_template %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_ad_matrix_category_id %>
+    <%= form.text_field :fk_ad_matrix_category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_matching_headline_category_id %>
+    <%= form.text_field :fk_matching_headline_category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_accessible %>
+    <%= form.text_field :is_accessible %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_accessible_text %>
+    <%= form.text_area :is_accessible_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :headlineColorTypeID %>
+    <%= form.number_field :headlineColorTypeID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

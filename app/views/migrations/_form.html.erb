@@ -1,0 +1,32 @@
+<%= form_with(model: migration, local: true) do |form| %>
+  <% if migration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(migration.errors.count, "error") %> prohibited this migration from being saved:</h2>
+
+      <ul>
+      <% migration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :batch %>
+    <%= form.number_field :batch %>
+  </div>
+
+  <div class="field">
+    <%= form.label :migration_time %>
+    <%= form.datetime_select :migration_time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

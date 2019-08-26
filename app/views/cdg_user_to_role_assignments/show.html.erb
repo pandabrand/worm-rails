@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpkfk role:</strong>
+  <%= @cdg_user_to_role_assignment.cpkfk_role %>
+</p>
+
+<p>
+  <strong>Cpkfk user:</strong>
+  <%= @cdg_user_to_role_assignment.cpkfk_user %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @cdg_user_to_role_assignment.is_active %>
+</p>
+
+<p>
+  <strong>Role sort order:</strong>
+  <%= @cdg_user_to_role_assignment.role_sort_order %>
+</p>
+
+<p>
+  <strong>User sort order:</strong>
+  <%= @cdg_user_to_role_assignment.user_sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_cdg_user_to_role_assignment_path(@cdg_user_to_role_assignment) %> |
+<%= link_to 'Back', cdg_user_to_role_assignments_path %>

@@ -1,0 +1,2 @@
+module SavedPublicationsHelper
+end

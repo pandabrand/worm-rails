@@ -1,0 +1,2 @@
+module CdgTemplateStageDataHelper
+end

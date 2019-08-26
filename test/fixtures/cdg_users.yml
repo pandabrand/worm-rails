@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_created: 2019-06-12 22:10:23
+  date_modified: 2019-06-12 22:10:23
+  password: MyString
+  username: MyString
+  is_active: MyString
+  fk_user_info: one
+  date_last_logged_in: 2019-06-12 22:10:23
+  skip_login_profile_page: MyString
+  new_login: MyString
+  fk_user: one
+
+two:
+  date_created: 2019-06-12 22:10:23
+  date_modified: 2019-06-12 22:10:23
+  password: MyString
+  username: MyString
+  is_active: MyString
+  fk_user_info: two
+  date_last_logged_in: 2019-06-12 22:10:23
+  skip_login_profile_page: MyString
+  new_login: MyString
+  fk_user: two

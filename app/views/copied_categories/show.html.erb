@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Destination pk:</strong>
+  <%= @copied_category.destination_pk %>
+</p>
+
+<p>
+  <strong>Copied pk:</strong>
+  <%= @copied_category.copied_pk %>
+</p>
+
+<%= link_to 'Edit', edit_copied_category_path(@copied_category) %> |
+<%= link_to 'Back', copied_categories_path %>

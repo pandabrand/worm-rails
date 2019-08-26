@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @title1.is_active %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @title1.name %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @title1.sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_title1_path(@title1) %> |
+<%= link_to 'Back', title1s_path %>

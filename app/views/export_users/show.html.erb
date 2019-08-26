@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Emp:</strong>
+  <%= @export_user.emp %>
+</p>
+
+<p>
+  <strong>Branch:</strong>
+  <%= @export_user.branch %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @export_user.region %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @export_user.last_name %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @export_user.first_name %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @export_user.job_title %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @export_user.email_address %>
+</p>
+
+<p>
+  <strong>Fk user:</strong>
+  <%= @export_user.fk_user %>
+</p>
+
+<p>
+  <strong>Financial advisor:</strong>
+  <%= @export_user.financial_advisor %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @export_user.area %>
+</p>
+
+<%= link_to 'Edit', edit_export_user_path(@export_user) %> |
+<%= link_to 'Back', export_users_path %>

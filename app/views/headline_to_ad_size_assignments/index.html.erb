@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Headline To Ad Size Assignments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpkfk ad size</th>
+      <th>Cpkfk headline</th>
+      <th>Is active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @headline_to_ad_size_assignments.each do |headline_to_ad_size_assignment| %>
+      <tr>
+        <td><%= headline_to_ad_size_assignment.cpkfk_ad_size %></td>
+        <td><%= headline_to_ad_size_assignment.cpkfk_headline %></td>
+        <td><%= headline_to_ad_size_assignment.is_active %></td>
+        <td><%= link_to 'Show', headline_to_ad_size_assignment %></td>
+        <td><%= link_to 'Edit', edit_headline_to_ad_size_assignment_path(headline_to_ad_size_assignment) %></td>
+        <td><%= link_to 'Destroy', headline_to_ad_size_assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Headline To Ad Size Assignment', new_headline_to_ad_size_assignment_path %>

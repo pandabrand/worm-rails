@@ -1,0 +1,2 @@
+class RegisteredComponent < ApplicationRecord
+end

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cdg Permissions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agent type</th>
+      <th>Fk user agent</th>
+      <th>Fk function resource</th>
+      <th>Permission</th>
+      <th>Resource type</th>
+      <th>Is active</th>
+      <th>Fk role agent</th>
+      <th>Fk function group resource</th>
+      <th>Fk nav menu item resource</th>
+      <th>Fk permission type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdg_permissions.each do |cdg_permission| %>
+      <tr>
+        <td><%= cdg_permission.agent_type %></td>
+        <td><%= cdg_permission.fk_user_agent %></td>
+        <td><%= cdg_permission.fk_function_resource %></td>
+        <td><%= cdg_permission.permission %></td>
+        <td><%= cdg_permission.resource_type %></td>
+        <td><%= cdg_permission.is_active %></td>
+        <td><%= cdg_permission.fk_role_agent %></td>
+        <td><%= cdg_permission.fk_function_group_resource %></td>
+        <td><%= cdg_permission.fk_nav_menu_item_resource %></td>
+        <td><%= cdg_permission.fk_permission_type %></td>
+        <td><%= link_to 'Show', cdg_permission %></td>
+        <td><%= link_to 'Edit', edit_cdg_permission_path(cdg_permission) %></td>
+        <td><%= link_to 'Destroy', cdg_permission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cdg Permission', new_cdg_permission_path %>

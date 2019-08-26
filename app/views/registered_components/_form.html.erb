@@ -1,0 +1,32 @@
+<%= form_with(model: registered_component, local: true) do |form| %>
+  <% if registered_component.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(registered_component.errors.count, "error") %> prohibited this registered_component from being saved:</h2>
+
+      <ul>
+      <% registered_component.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :admin_display_name %>
+    <%= form.text_field :admin_display_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :component_name %>
+    <%= form.text_field :component_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :page_description %>
+    <%= form.text_area :page_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,1 @@
+json.partial! "registered_component_htmls/registered_component_html", registered_component_html: @registered_component_html

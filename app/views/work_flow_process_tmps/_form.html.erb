@@ -1,0 +1,52 @@
+<%= form_with(model: work_flow_process_tmp, local: true) do |form| %>
+  <% if work_flow_process_tmp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work_flow_process_tmp.errors.count, "error") %> prohibited this work_flow_process_tmp from being saved:</h2>
+
+      <ul>
+      <% work_flow_process_tmp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :end_condition_code %>
+    <%= form.text_area :end_condition_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_code %>
+    <%= form.text_area :start_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_condition_code %>
+    <%= form.text_area :start_condition_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_parent_process_id %>
+    <%= form.text_field :fk_parent_process_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :submit_code %>
+    <%= form.text_area :submit_code %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

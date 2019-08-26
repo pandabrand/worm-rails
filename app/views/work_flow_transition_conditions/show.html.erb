@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transitioncode:</strong>
+  <%= @work_flow_transition_condition.transitionCode %>
+</p>
+
+<p>
+  <strong>Cpkfk predecessor:</strong>
+  <%= @work_flow_transition_condition.cpkfk_predecessor %>
+</p>
+
+<p>
+  <strong>Cpkfk successor:</strong>
+  <%= @work_flow_transition_condition.cpkfk_successor %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @work_flow_transition_condition.is_active %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @work_flow_transition_condition.name %>
+</p>
+
+<%= link_to 'Edit', edit_work_flow_transition_condition_path(@work_flow_transition_condition) %> |
+<%= link_to 'Back', work_flow_transition_conditions_path %>

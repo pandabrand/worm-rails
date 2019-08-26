@@ -1,0 +1,2 @@
+module ImportMaNewsHelper
+end

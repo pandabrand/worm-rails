@@ -1,0 +1,2 @@
+module LabAreasHelper
+end

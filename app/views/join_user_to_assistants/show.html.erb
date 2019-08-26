@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpfk user:</strong>
+  <%= @join_user_to_assistant.cpfk_user %>
+</p>
+
+<p>
+  <strong>Cpfk assistant:</strong>
+  <%= @join_user_to_assistant.cpfk_assistant %>
+</p>
+
+<%= link_to 'Edit', edit_join_user_to_assistant_path(@join_user_to_assistant) %> |
+<%= link_to 'Back', join_user_to_assistants_path %>

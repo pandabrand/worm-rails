@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpkfk user:</strong>
+  <%= @activity_participant_assignment.cpkfk_user %>
+</p>
+
+<p>
+  <strong>Cpkfk activity instance:</strong>
+  <%= @activity_participant_assignment.cpkfk_activity_instance %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @activity_participant_assignment.date_created %>
+</p>
+
+<p>
+  <strong>Fk assistant:</strong>
+  <%= @activity_participant_assignment.fk_assistant %>
+</p>
+
+<%= link_to 'Edit', edit_activity_participant_assignment_path(@activity_participant_assignment) %> |
+<%= link_to 'Back', activity_participant_assignments_path %>

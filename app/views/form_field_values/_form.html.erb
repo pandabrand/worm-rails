@@ -1,0 +1,72 @@
+<%= form_with(model: form_field_value, local: true) do |form| %>
+  <% if form_field_value.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(form_field_value.errors.count, "error") %> prohibited this form_field_value from being saved:</h2>
+
+      <ul>
+      <% form_field_value.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fk_template_form_field_id %>
+    <%= form.text_field :fk_template_form_field_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_order_id %>
+    <%= form.text_field :fk_order_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_area :value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :x_position %>
+    <%= form.number_field :x_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :y_position %>
+    <%= form.number_field :y_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_user_id %>
+    <%= form.text_field :fk_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_portrait_image_id %>
+    <%= form.text_field :fk_portrait_image_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_title_id %>
+    <%= form.text_field :fk_title_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_title2_id %>
+    <%= form.text_field :fk_title2_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title3ID %>
+    <%= form.number_field :title3ID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :customValueID %>
+    <%= form.number_field :customValueID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fk_template_form_field: one
+  fk_order: one
+  value: MyText
+  x_position: 1
+  y_position: 1
+  fk_user: one
+  fk_portrait_image: one
+  fk_title: one
+  fk_title2: one
+  title3ID: 1
+  customValueID: 1
+
+two:
+  fk_template_form_field: two
+  fk_order: two
+  value: MyText
+  x_position: 1
+  y_position: 1
+  fk_user: two
+  fk_portrait_image: two
+  fk_title: two
+  fk_title2: two
+  title3ID: 1
+  customValueID: 1

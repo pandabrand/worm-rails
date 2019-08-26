@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tag line:</strong>
+  <%= @featured_headline.tag_line %>
+</p>
+
+<p>
+  <strong>Headline sort order:</strong>
+  <%= @featured_headline.headline_sort_order %>
+</p>
+
+<p>
+  <strong>Fk headline:</strong>
+  <%= @featured_headline.fk_headline %>
+</p>
+
+<%= link_to 'Edit', edit_featured_headline_path(@featured_headline) %> |
+<%= link_to 'Back', featured_headlines_path %>

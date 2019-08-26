@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpkfk comment:</strong>
+  <%= @comment_to_order.cpkfk_comment %>
+</p>
+
+<p>
+  <strong>Cpkfk order:</strong>
+  <%= @comment_to_order.cpkfk_order %>
+</p>
+
+<%= link_to 'Edit', edit_comment_to_order_path(@comment_to_order) %> |
+<%= link_to 'Back', comment_to_orders_path %>

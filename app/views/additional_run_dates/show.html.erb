@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pk:</strong>
+  <%= @additional_run_date.pk %>
+</p>
+
+<p>
+  <strong>Run date:</strong>
+  <%= @additional_run_date.run_date %>
+</p>
+
+<p>
+  <strong>Fk order:</strong>
+  <%= @additional_run_date.fk_order %>
+</p>
+
+<%= link_to 'Edit', edit_additional_run_date_path(@additional_run_date) %> |
+<%= link_to 'Back', additional_run_dates_path %>

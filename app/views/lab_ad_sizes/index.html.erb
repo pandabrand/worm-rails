@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lab Ad Sizes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Is active</th>
+      <th>Size name</th>
+      <th>Sort order</th>
+      <th>Mediatypeid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lab_ad_sizes.each do |lab_ad_size| %>
+      <tr>
+        <td><%= lab_ad_size.is_active %></td>
+        <td><%= lab_ad_size.size_name %></td>
+        <td><%= lab_ad_size.sort_order %></td>
+        <td><%= lab_ad_size.mediaTypeID %></td>
+        <td><%= link_to 'Show', lab_ad_size %></td>
+        <td><%= link_to 'Edit', edit_lab_ad_size_path(lab_ad_size) %></td>
+        <td><%= link_to 'Destroy', lab_ad_size, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lab Ad Size', new_lab_ad_size_path %>

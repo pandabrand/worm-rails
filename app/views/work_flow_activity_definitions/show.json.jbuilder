@@ -1,0 +1,1 @@
+json.partial! "work_flow_activity_definitions/work_flow_activity_definition", work_flow_activity_definition: @work_flow_activity_definition

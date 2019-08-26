@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpkfk_user: one
+  cpkfk_activity_instance: one
+  date_created: 2019-06-12 22:07:22
+  fk_assistant: one
+
+two:
+  cpkfk_user: two
+  cpkfk_activity_instance: two
+  date_created: 2019-06-12 22:07:22
+  fk_assistant: two

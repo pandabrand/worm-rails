@@ -1,0 +1,32 @@
+<%= form_with(model: data_ref2, local: true) do |form| %>
+  <% if data_ref2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(data_ref2.errors.count, "error") %> prohibited this data_ref2 from being saved:</h2>
+
+      <ul>
+      <% data_ref2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_type_id %>
+    <%= form.text_field :fk_type_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

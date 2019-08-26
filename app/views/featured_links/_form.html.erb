@@ -1,0 +1,32 @@
+<%= form_with(model: featured_link, local: true) do |form| %>
+  <% if featured_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(featured_link.errors.count, "error") %> prohibited this featured_link from being saved:</h2>
+
+      <ul>
+      <% featured_link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :sort_order %>
+    <%= form.number_field :sort_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_name %>
+    <%= form.text_field :link_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

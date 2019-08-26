@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is locked:</strong>
+  <%= @migrations_lock.is_locked %>
+</p>
+
+<%= link_to 'Edit', edit_migrations_lock_path(@migrations_lock) %> |
+<%= link_to 'Back', migrations_locks_path %>

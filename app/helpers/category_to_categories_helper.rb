@@ -1,0 +1,2 @@
+module CategoryToCategoriesHelper
+end

@@ -1,0 +1,33 @@
+<SUBMISSION xmlns="http://morganstanley.com/archive_ingestion" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://morganstanley.com/archive_ingestion schema.xsd">
+<OBJ>
+<ONAME>Print Ad</ONAME>
+<ILM_EON_ID>24944</ILM_EON_ID>
+<ILM_RCC code="ENS150">
+<ILM_ISO_COUNTRY>USA</ILM_ISO_COUNTRY>
+<LDAP_GROUP>adbuilder_era_archive_uat_access</LDAP_GROUP>
+<ILM_COST_CTR_NO>575440</ILM_COST_CTR_NO>
+<ILM_INFO_SEC_CLASS>CONFIDENTIAL</ILM_INFO_SEC_CLASS>
+<ILM_OFFCL_REC>1</ILM_OFFCL_REC>
+<ILM_BU_OWNER owner-type="MSSUPERDEPARTMENTCODE">87679</ILM_BU_OWNER>
+</ILM_RCC>
+<DELIVERY path="string" type="electronic"/>
+<ILM_NAME>Print Ad</ILM_NAME>
+<ILM_OFFCL_REC>official</ILM_OFFCL_REC>
+<ILM_REC_DT>2017-03-23 08:42:07 UTC</ILM_REC_DT>
+<ILM_ORIGINATOR>proid</ILM_ORIGINATOR>
+<ILM_MS_Status>Ready for Download</ILM_MS_Status>
+<ILM_ACTIVE>inactive</ILM_ACTIVE>
+<ILM_SUB_DATE>2017-03-22 17:44:05 UTC</ILM_SUB_DATE>
+<ILM_DESC>BC008 Business Card Bulleted</ILM_DESC>
+<ILM_TRANS_TYPE>Print Ad</ILM_TRANS_TYPE>
+<ILM_ACCT_NO>61207</ILM_ACCT_NO>
+<ILM_AMOUNT>0.00</ILM_AMOUNT>
+<ILM_BRANC_NO>100055</ILM_BRANC_NO>
+<ILM_INST_NM>PLANO NORTH</ILM_INST_NM>
+<ILM_REGION>25307</ILM_REGION>
+<ILM_DEPT_CODE>025</ILM_DEPT_CODE>
+<ILM_CONTACT_NM>David Miller</ILM_CONTACT_NM>
+<ILM_VEND_NM>AdBuilder</ILM_VEND_NM>
+<ILM_PATH>D:\\Apache2.2\\htdocs\\pickup\\61207_final.pdf</ILM_PATH>
+</OBJ>
+</SUBMISSION>

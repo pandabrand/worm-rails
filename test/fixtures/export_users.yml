@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emp: one
+  branch: one
+  region: one
+  last_name: MyString
+  first_name: MyString
+  job_title: MyString
+  email_address: MyString
+  fk_user: one
+  financial_advisor: one
+  area: one
+
+two:
+  emp: two
+  branch: two
+  region: two
+  last_name: MyString
+  first_name: MyString
+  job_title: MyString
+  email_address: MyString
+  fk_user: two
+  financial_advisor: two
+  area: two

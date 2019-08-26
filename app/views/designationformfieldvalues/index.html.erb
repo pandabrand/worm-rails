@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Designationformfieldvalues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designationpk</th>
+      <th>Formfieldvaluepkid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @designationformfieldvalues.each do |designationformfieldvalue| %>
+      <tr>
+        <td><%= designationformfieldvalue.designationPk %></td>
+        <td><%= designationformfieldvalue.formFieldValuePkID %></td>
+        <td><%= link_to 'Show', designationformfieldvalue %></td>
+        <td><%= link_to 'Edit', edit_designationformfieldvalue_path(designationformfieldvalue) %></td>
+        <td><%= link_to 'Destroy', designationformfieldvalue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Designationformfieldvalue', new_designationformfieldvalue_path %>

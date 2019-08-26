@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Migrations Locks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Is locked</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @migrations_locks.each do |migrations_lock| %>
+      <tr>
+        <td><%= migrations_lock.is_locked %></td>
+        <td><%= link_to 'Show', migrations_lock %></td>
+        <td><%= link_to 'Edit', edit_migrations_lock_path(migrations_lock) %></td>
+        <td><%= link_to 'Destroy', migrations_lock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Migrations Lock', new_migrations_lock_path %>

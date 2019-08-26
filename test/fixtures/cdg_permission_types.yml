@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sort_order: 1
+  is_active: MyString
+  name: MyString
+  fk_permission_type: one
+
+two:
+  sort_order: 1
+  is_active: MyString
+  name: MyString
+  fk_permission_type: two

@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @lab_branch.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @lab_branch.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @lab_branch.city %>
+</p>
+
+<p>
+  <strong>Fk country:</strong>
+  <%= @lab_branch.fk_country %>
+</p>
+
+<p>
+  <strong>Fk us state:</strong>
+  <%= @lab_branch.fk_us_state %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lab_branch.name %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @lab_branch.zip %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @lab_branch.is_active %>
+</p>
+
+<p>
+  <strong>Branch:</strong>
+  <%= @lab_branch.branch %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @lab_branch.state %>
+</p>
+
+<p>
+  <strong>Fk area:</strong>
+  <%= @lab_branch.fk_area %>
+</p>
+
+<p>
+  <strong>Fk complex:</strong>
+  <%= @lab_branch.fk_complex %>
+</p>
+
+<%= link_to 'Edit', edit_lab_branch_path(@lab_branch) %> |
+<%= link_to 'Back', lab_branches_path %>

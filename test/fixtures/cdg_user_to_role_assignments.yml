@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpkfk_role: one
+  cpkfk_user: one
+  is_active: MyString
+  role_sort_order: 1
+  user_sort_order: 1
+
+two:
+  cpkfk_role: two
+  cpkfk_user: two
+  is_active: MyString
+  role_sort_order: 1
+  user_sort_order: 1

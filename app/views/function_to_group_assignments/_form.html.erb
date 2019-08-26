@@ -1,0 +1,37 @@
+<%= form_with(model: function_to_group_assignment, local: true) do |form| %>
+  <% if function_to_group_assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(function_to_group_assignment.errors.count, "error") %> prohibited this function_to_group_assignment from being saved:</h2>
+
+      <ul>
+      <% function_to_group_assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :group_sort_order %>
+    <%= form.number_field :group_sort_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpkfk_function_group_id %>
+    <%= form.text_field :cpkfk_function_group_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpkfk_function_id %>
+    <%= form.text_field :cpkfk_function_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :function_sort_order %>
+    <%= form.number_field :function_sort_order %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

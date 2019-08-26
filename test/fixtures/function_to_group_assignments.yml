@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group_sort_order: 1
+  cpkfk_function_group: one
+  cpkfk_function: one
+  function_sort_order: 1
+
+two:
+  group_sort_order: 1
+  cpkfk_function_group: two
+  cpkfk_function: two
+  function_sort_order: 1

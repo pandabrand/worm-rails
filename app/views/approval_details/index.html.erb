@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Approval Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fk role</th>
+      <th>Comments</th>
+      <th>Date created</th>
+      <th>Fk order</th>
+      <th>Fk order item</th>
+      <th>Fk user</th>
+      <th>Fk work activity instance</th>
+      <th>Media</th>
+      <th>Order number</th>
+      <th>Status description</th>
+      <th>User name</th>
+      <th>User role</th>
+      <th>Fk assistant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @approval_details.each do |approval_detail| %>
+      <tr>
+        <td><%= approval_detail.fk_role %></td>
+        <td><%= approval_detail.comments %></td>
+        <td><%= approval_detail.date_created %></td>
+        <td><%= approval_detail.fk_order %></td>
+        <td><%= approval_detail.fk_order_item %></td>
+        <td><%= approval_detail.fk_user %></td>
+        <td><%= approval_detail.fk_work_activity_instance %></td>
+        <td><%= approval_detail.media %></td>
+        <td><%= approval_detail.order_number %></td>
+        <td><%= approval_detail.status_description %></td>
+        <td><%= approval_detail.user_name %></td>
+        <td><%= approval_detail.user_role %></td>
+        <td><%= approval_detail.fk_assistant %></td>
+        <td><%= link_to 'Show', approval_detail %></td>
+        <td><%= link_to 'Edit', edit_approval_detail_path(approval_detail) %></td>
+        <td><%= link_to 'Destroy', approval_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Approval Detail', new_approval_detail_path %>

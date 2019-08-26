@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Copied Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Destination pk</th>
+      <th>Copied pk</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @copied_categories.each do |copied_category| %>
+      <tr>
+        <td><%= copied_category.destination_pk %></td>
+        <td><%= copied_category.copied_pk %></td>
+        <td><%= link_to 'Show', copied_category %></td>
+        <td><%= link_to 'Edit', edit_copied_category_path(copied_category) %></td>
+        <td><%= link_to 'Destroy', copied_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Copied Category', new_copied_category_path %>

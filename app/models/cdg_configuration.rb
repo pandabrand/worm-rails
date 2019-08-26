@@ -1,0 +1,2 @@
+class CdgConfiguration < ApplicationRecord
+end

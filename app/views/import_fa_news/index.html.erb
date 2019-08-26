@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Import Fa News</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Var division</th>
+      <th>Var district</th>
+      <th>Var branch</th>
+      <th>Var lastname</th>
+      <th>Var firstname</th>
+      <th>Var empid</th>
+      <th>Var jobtitle</th>
+      <th>Var jobcode</th>
+      <th>Var address1</th>
+      <th>Var address2</th>
+      <th>Var city</th>
+      <th>Var state</th>
+      <th>Var zip</th>
+      <th>Var email</th>
+      <th>Var workphone</th>
+      <th>Var firm</th>
+      <th>Var region</th>
+      <th>Var workaddressfull</th>
+      <th>Var date added</th>
+      <th>Var address3</th>
+      <th>Complex</th>
+      <th>Complex name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @import_fa_news.each do |import_fa_news| %>
+      <tr>
+        <td><%= import_fa_news.var_division %></td>
+        <td><%= import_fa_news.var_district %></td>
+        <td><%= import_fa_news.var_branch %></td>
+        <td><%= import_fa_news.var_lastname %></td>
+        <td><%= import_fa_news.var_firstname %></td>
+        <td><%= import_fa_news.var_empid %></td>
+        <td><%= import_fa_news.var_jobtitle %></td>
+        <td><%= import_fa_news.var_jobcode %></td>
+        <td><%= import_fa_news.var_address1 %></td>
+        <td><%= import_fa_news.var_address2 %></td>
+        <td><%= import_fa_news.var_city %></td>
+        <td><%= import_fa_news.var_state %></td>
+        <td><%= import_fa_news.var_zip %></td>
+        <td><%= import_fa_news.var_email %></td>
+        <td><%= import_fa_news.var_workphone %></td>
+        <td><%= import_fa_news.var_firm %></td>
+        <td><%= import_fa_news.var_region %></td>
+        <td><%= import_fa_news.var_workaddressfull %></td>
+        <td><%= import_fa_news.var_date_added %></td>
+        <td><%= import_fa_news.var_address3 %></td>
+        <td><%= import_fa_news.complex %></td>
+        <td><%= import_fa_news.complex_name %></td>
+        <td><%= link_to 'Show', import_fa_news %></td>
+        <td><%= link_to 'Edit', edit_import_fa_news_path(import_fa_news) %></td>
+        <td><%= link_to 'Destroy', import_fa_news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Import Fa News', new_import_fa_news_path %>

@@ -1,0 +1,2 @@
+json.extract! lab_user_info, :id, :date_created, :date_modified, :is_active, :name_last, :name_first, :alternate_address_1, :alternate_address_2, :alternate_city, :alternate_zip, :business_fax, :business_phone, :employee_id, :financial_advisor_id, :fk_alternate_us_state_id, :fk_branch_id, :fk_country_id, :fk_title1_id, :fk_title2_id, :fk_region_id, :fk_area_id, :assistant_email, :fk_roletitle_id, :fk_client_id, :fkTitle3ID, :created_at, :updated_at
+json.url lab_user_info_url(lab_user_info, format: :json)

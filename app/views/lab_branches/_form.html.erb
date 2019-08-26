@@ -1,0 +1,77 @@
+<%= form_with(model: lab_branch, local: true) do |form| %>
+  <% if lab_branch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lab_branch.errors.count, "error") %> prohibited this lab_branch from being saved:</h2>
+
+      <ul>
+      <% lab_branch.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :address1 %>
+    <%= form.text_area :address1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address2 %>
+    <%= form.text_area :address2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_country_id %>
+    <%= form.text_field :fk_country_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_us_state_id %>
+    <%= form.text_field :fk_us_state_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch_id %>
+    <%= form.text_field :branch_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_area_id %>
+    <%= form.text_field :fk_area_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_complex_id %>
+    <%= form.text_field :fk_complex_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

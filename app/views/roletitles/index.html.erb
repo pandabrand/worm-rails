@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roletitles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Is active</th>
+      <th>Name</th>
+      <th>Fk role</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roletitles.each do |roletitle| %>
+      <tr>
+        <td><%= roletitle.is_active %></td>
+        <td><%= roletitle.name %></td>
+        <td><%= roletitle.fk_role %></td>
+        <td><%= link_to 'Show', roletitle %></td>
+        <td><%= link_to 'Edit', edit_roletitle_path(roletitle) %></td>
+        <td><%= link_to 'Destroy', roletitle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roletitle', new_roletitle_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cdg User To Role Assignments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpkfk role</th>
+      <th>Cpkfk user</th>
+      <th>Is active</th>
+      <th>Role sort order</th>
+      <th>User sort order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdg_user_to_role_assignments.each do |cdg_user_to_role_assignment| %>
+      <tr>
+        <td><%= cdg_user_to_role_assignment.cpkfk_role %></td>
+        <td><%= cdg_user_to_role_assignment.cpkfk_user %></td>
+        <td><%= cdg_user_to_role_assignment.is_active %></td>
+        <td><%= cdg_user_to_role_assignment.role_sort_order %></td>
+        <td><%= cdg_user_to_role_assignment.user_sort_order %></td>
+        <td><%= link_to 'Show', cdg_user_to_role_assignment %></td>
+        <td><%= link_to 'Edit', edit_cdg_user_to_role_assignment_path(cdg_user_to_role_assignment) %></td>
+        <td><%= link_to 'Destroy', cdg_user_to_role_assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cdg User To Role Assignment', new_cdg_user_to_role_assignment_path %>

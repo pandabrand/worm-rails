@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @cdg_order_status.is_active %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cdg_order_status.name %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @cdg_order_status.sort_order %>
+</p>
+
+<p>
+  <strong>Name for display:</strong>
+  <%= @cdg_order_status.name_for_display %>
+</p>
+
+<%= link_to 'Edit', edit_cdg_order_status_path(@cdg_order_status) %> |
+<%= link_to 'Back', cdg_order_statuses_path %>

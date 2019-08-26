@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fk_region: one
+  area_number: MyString
+  is_active: MyString
+  name: MyString
+  sort_order: 1
+
+two:
+  fk_region: two
+  area_number: MyString
+  is_active: MyString
+  name: MyString
+  sort_order: 1

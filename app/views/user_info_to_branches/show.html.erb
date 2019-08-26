@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpkfk branch:</strong>
+  <%= @user_info_to_branch.cpkfk_branch %>
+</p>
+
+<p>
+  <strong>Cpkfk user info:</strong>
+  <%= @user_info_to_branch.cpkfk_user_info %>
+</p>
+
+<%= link_to 'Edit', edit_user_info_to_branch_path(@user_info_to_branch) %> |
+<%= link_to 'Back', user_info_to_branches_path %>

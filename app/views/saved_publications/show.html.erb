@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @saved_publication.contact_name %>
+</p>
+
+<p>
+  <strong>Contact phone:</strong>
+  <%= @saved_publication.contact_phone %>
+</p>
+
+<p>
+  <strong>Contact email address:</strong>
+  <%= @saved_publication.contact_email_address %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @saved_publication.date_created %>
+</p>
+
+<p>
+  <strong>Fk creator:</strong>
+  <%= @saved_publication.fk_creator %>
+</p>
+
+<p>
+  <strong>Fk publication type:</strong>
+  <%= @saved_publication.fk_publication_type %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @saved_publication.is_active %>
+</p>
+
+<p>
+  <strong>Publication name:</strong>
+  <%= @saved_publication.publication_name %>
+</p>
+
+<%= link_to 'Edit', edit_saved_publication_path(@saved_publication) %> |
+<%= link_to 'Back', saved_publications_path %>

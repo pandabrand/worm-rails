@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fk creator</th>
+      <th>Fk user</th>
+      <th>Value</th>
+      <th>Date created</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_comments.each do |user_comment| %>
+      <tr>
+        <td><%= user_comment.fk_creator %></td>
+        <td><%= user_comment.fk_user %></td>
+        <td><%= user_comment.value %></td>
+        <td><%= user_comment.date_created %></td>
+        <td><%= link_to 'Show', user_comment %></td>
+        <td><%= link_to 'Edit', edit_user_comment_path(user_comment) %></td>
+        <td><%= link_to 'Destroy', user_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Comment', new_user_comment_path %>

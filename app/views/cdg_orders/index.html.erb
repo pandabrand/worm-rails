@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cdg Orders</h1>
+
+<div><%= link_to "start ingest", action: "ingest_worm_reports" %></div>
+<div><%= link_to 'Download CSV list', action: "csv_reports" %>
+</div>
+<%= will_paginate @cdg_orders %>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Contact email address</th>
+      <th>Contact name</th>
+      <th>Contact phone</th>
+      <th>Cost</th>
+      <th>Date created</th>
+      <th>Materials close date</th>
+      <th>Publication name</th>
+      <th>Run date</th>
+      <th>Seminar date time</th>
+      <th>Seminar location</th>
+      <th>Speaker name and title</th>
+      <th>Advisor name</th>
+      <th>Advisor phone</th>
+      <th>Branch address1</th>
+      <th>Branch city</th>
+      <th>Is active</th>
+      <th>Comments</th>
+      <th>Date downloaded</th>
+      <th>Date submitted</th>
+      <th>WORM Status</th>
+      <th>View</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdg_orders.each do |cdg_order| %>
+      <tr>
+        <td><%= cdg_order.pk_id %></td>
+        <td><%= cdg_order.contact_email_address %></td>
+        <td><%= cdg_order.contact_name %></td>
+        <td><%= cdg_order.contact_phone %></td>
+        <td><%= cdg_order.cost %></td>
+        <td><%= cdg_order.date_created %></td>
+        <td><%= cdg_order.materials_close_date %></td>
+        <td><%= cdg_order.publication_name %></td>
+        <td><%= cdg_order.run_date %></td>
+        <td><%= cdg_order.seminar_date_time %></td>
+        <td><%= cdg_order.seminar_location %></td>
+        <td><%= cdg_order.speaker_name_and_title %></td>
+        <td><%= cdg_order.advisor_name %></td>
+        <td><%= cdg_order.advisor_phone %></td>
+        <td><%= cdg_order.branch_address1 %></td>
+        <td><%= cdg_order.branch_city %></td>
+        <td><%= cdg_order.is_active %></td>
+        <td><%= cdg_order.comments %></td>
+        <td><%= cdg_order.date_downloaded %></td>
+        <td><%= cdg_order.date_submitted %></td>
+        <td><%= cdg_order.worm_status %></td>
+        <td><%= link_to 'Show', cdg_order %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Cdg Order', new_cdg_order_path %>

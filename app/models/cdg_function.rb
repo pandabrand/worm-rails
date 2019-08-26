@@ -1,0 +1,2 @@
+class CdgFunction < ApplicationRecord
+end

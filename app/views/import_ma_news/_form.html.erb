@@ -1,0 +1,122 @@
+<%= form_with(model: import_ma_news, local: true) do |form| %>
+  <% if import_ma_news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(import_ma_news.errors.count, "error") %> prohibited this import_ma_news from being saved:</h2>
+
+      <ul>
+      <% import_ma_news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :var_division %>
+    <%= form.text_field :var_division %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_district %>
+    <%= form.text_field :var_district %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_branch %>
+    <%= form.text_field :var_branch %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_lastname %>
+    <%= form.text_field :var_lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_firstname %>
+    <%= form.text_field :var_firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_empid %>
+    <%= form.text_field :var_empid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_jobtitle %>
+    <%= form.text_field :var_jobtitle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_jobcode %>
+    <%= form.text_field :var_jobcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_address1 %>
+    <%= form.text_field :var_address1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_address2 %>
+    <%= form.text_field :var_address2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_city %>
+    <%= form.text_field :var_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_state %>
+    <%= form.text_field :var_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_zip %>
+    <%= form.text_field :var_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_email %>
+    <%= form.text_field :var_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_workphone %>
+    <%= form.text_field :var_workphone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_firm %>
+    <%= form.text_field :var_firm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_region %>
+    <%= form.text_field :var_region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_workaddressfull %>
+    <%= form.text_field :var_workaddressfull %>
+  </div>
+
+  <div class="field">
+    <%= form.label :var_date_added %>
+    <%= form.datetime_select :var_date_added %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complex_id %>
+    <%= form.text_field :complex_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complex_name %>
+    <%= form.text_field :complex_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

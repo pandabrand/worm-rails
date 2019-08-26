@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isRegistered: MyString
+  name: MyString
+  sortOrder: 1
+
+two:
+  isRegistered: MyString
+  name: MyString
+  sortOrder: 1

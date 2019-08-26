@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contact_name: MyString
+  contact_phone: MyString
+  contact_email_address: MyString
+  date_created: 2019-06-12 22:15:04
+  fk_creator: one
+  fk_publication_type: one
+  is_active: MyString
+  publication_name: MyString
+
+two:
+  contact_name: MyString
+  contact_phone: MyString
+  contact_email_address: MyString
+  date_created: 2019-06-12 22:15:04
+  fk_creator: two
+  fk_publication_type: two
+  is_active: MyString
+  publication_name: MyString

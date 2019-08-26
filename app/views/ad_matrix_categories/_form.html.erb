@@ -1,0 +1,87 @@
+<%= form_with(model: ad_matrix_category, local: true) do |form| %>
+  <% if ad_matrix_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ad_matrix_category.errors.count, "error") %> prohibited this ad_matrix_category from being saved:</h2>
+
+      <ul>
+      <% ad_matrix_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :category_name %>
+    <%= form.text_field :category_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_parent_category_id %>
+    <%= form.text_field :fk_parent_category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sort_order %>
+    <%= form.number_field :sort_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_featured_headline_id %>
+    <%= form.text_field :fk_featured_headline_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_embargo %>
+    <%= form.datetime_select :date_embargo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_expiration %>
+    <%= form.datetime_select :date_expiration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thumbnail_unique_name %>
+    <%= form.text_field :thumbnail_unique_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thumbnail_upload_name %>
+    <%= form.text_field :thumbnail_upload_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_created %>
+    <%= form.datetime_select :date_created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_modified %>
+    <%= form.datetime_select :date_modified %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_latest_template_id %>
+    <%= form.text_field :fk_latest_template_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :copied_headline_id %>
+    <%= form.text_field :copied_headline_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

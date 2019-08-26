@@ -1,0 +1,27 @@
+<%= form_with(model: join_user_to_assistant, local: true) do |form| %>
+  <% if join_user_to_assistant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(join_user_to_assistant.errors.count, "error") %> prohibited this join_user_to_assistant from being saved:</h2>
+
+      <ul>
+      <% join_user_to_assistant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpfk_user_id %>
+    <%= form.text_field :cpfk_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpfk_assistant_id %>
+    <%= form.text_field :cpfk_assistant_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

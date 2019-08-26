@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpfk_user: one
+  cpfk_assistant: one
+
+two:
+  cpfk_user: two
+  cpfk_assistant: two

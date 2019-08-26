@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fk_user: one
+  type: 
+  upload_date: 2019-06-12 22:15:23
+
+two:
+  fk_user: two
+  type: 
+  upload_date: 2019-06-12 22:15:23

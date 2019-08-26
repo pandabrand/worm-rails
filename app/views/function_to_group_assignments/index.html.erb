@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Function To Group Assignments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group sort order</th>
+      <th>Cpkfk function group</th>
+      <th>Cpkfk function</th>
+      <th>Function sort order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @function_to_group_assignments.each do |function_to_group_assignment| %>
+      <tr>
+        <td><%= function_to_group_assignment.group_sort_order %></td>
+        <td><%= function_to_group_assignment.cpkfk_function_group %></td>
+        <td><%= function_to_group_assignment.cpkfk_function %></td>
+        <td><%= function_to_group_assignment.function_sort_order %></td>
+        <td><%= link_to 'Show', function_to_group_assignment %></td>
+        <td><%= link_to 'Edit', edit_function_to_group_assignment_path(function_to_group_assignment) %></td>
+        <td><%= link_to 'Destroy', function_to_group_assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Function To Group Assignment', new_function_to_group_assignment_path %>

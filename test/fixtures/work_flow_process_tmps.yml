@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  end_condition_code: MyText
+  is_active: MyString
+  name: MyString
+  start_code: MyText
+  start_condition_code: MyText
+  fk_parent_process: one
+  submit_code: MyText
+
+two:
+  end_condition_code: MyText
+  is_active: MyString
+  name: MyString
+  start_code: MyText
+  start_condition_code: MyText
+  fk_parent_process: two
+  submit_code: MyText

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ad Matrix Category Headlines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ad matrix pk</th>
+      <th>Headline pk</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ad_matrix_category_headlines.each do |ad_matrix_category_headline| %>
+      <tr>
+        <td><%= ad_matrix_category_headline.ad_matrix_pk %></td>
+        <td><%= ad_matrix_category_headline.headline_pk %></td>
+        <td><%= link_to 'Show', ad_matrix_category_headline %></td>
+        <td><%= link_to 'Edit', edit_ad_matrix_category_headline_path(ad_matrix_category_headline) %></td>
+        <td><%= link_to 'Destroy', ad_matrix_category_headline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ad Matrix Category Headline', new_ad_matrix_category_headline_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group sort order:</strong>
+  <%= @function_to_group_assignment.group_sort_order %>
+</p>
+
+<p>
+  <strong>Cpkfk function group:</strong>
+  <%= @function_to_group_assignment.cpkfk_function_group %>
+</p>
+
+<p>
+  <strong>Cpkfk function:</strong>
+  <%= @function_to_group_assignment.cpkfk_function %>
+</p>
+
+<p>
+  <strong>Function sort order:</strong>
+  <%= @function_to_group_assignment.function_sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_function_to_group_assignment_path(@function_to_group_assignment) %> |
+<%= link_to 'Back', function_to_group_assignments_path %>

@@ -1,0 +1,47 @@
+<%= form_with(model: cdg_nav_menu_item, local: true) do |form| %>
+  <% if cdg_nav_menu_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cdg_nav_menu_item.errors.count, "error") %> prohibited this cdg_nav_menu_item from being saved:</h2>
+
+      <ul>
+      <% cdg_nav_menu_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :display_string %>
+    <%= form.text_field :display_string %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_parent_nav_menu_item_id %>
+    <%= form.text_field :fk_parent_nav_menu_item_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :page_name %>
+    <%= form.text_field :page_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sort_order %>
+    <%= form.number_field :sort_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :display_image_filename %>
+    <%= form.text_field :display_image_filename %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

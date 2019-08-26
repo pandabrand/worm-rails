@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_name: MyString
+  fk_parent_category: one
+  is_active: MyString
+  sort_order: 1
+  fk_featured_headline: one
+  date_embargo: 2019-06-12 22:08:00
+  date_expiration: 2019-06-12 22:08:00
+  level: 1
+  thumbnail_unique_name: MyString
+  thumbnail_upload_name: MyString
+  date_created: 2019-06-12 22:08:00
+  date_modified: 2019-06-12 22:08:00
+  fk_latest_template: one
+  copied_headline: one
+
+two:
+  category_name: MyString
+  fk_parent_category: two
+  is_active: MyString
+  sort_order: 1
+  fk_featured_headline: two
+  date_embargo: 2019-06-12 22:08:00
+  date_expiration: 2019-06-12 22:08:00
+  level: 1
+  thumbnail_unique_name: MyString
+  thumbnail_upload_name: MyString
+  date_created: 2019-06-12 22:08:00
+  date_modified: 2019-06-12 22:08:00
+  fk_latest_template: two
+  copied_headline: two

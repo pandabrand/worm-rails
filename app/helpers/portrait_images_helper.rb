@@ -1,0 +1,2 @@
+module PortraitImagesHelper
+end

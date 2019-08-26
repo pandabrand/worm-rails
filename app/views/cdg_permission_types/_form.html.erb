@@ -1,0 +1,37 @@
+<%= form_with(model: cdg_permission_type, local: true) do |form| %>
+  <% if cdg_permission_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cdg_permission_type.errors.count, "error") %> prohibited this cdg_permission_type from being saved:</h2>
+
+      <ul>
+      <% cdg_permission_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :sort_order %>
+    <%= form.number_field :sort_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_permission_type_id %>
+    <%= form.text_field :fk_permission_type_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

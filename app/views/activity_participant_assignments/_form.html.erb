@@ -1,0 +1,37 @@
+<%= form_with(model: activity_participant_assignment, local: true) do |form| %>
+  <% if activity_participant_assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(activity_participant_assignment.errors.count, "error") %> prohibited this activity_participant_assignment from being saved:</h2>
+
+      <ul>
+      <% activity_participant_assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpkfk_user_id %>
+    <%= form.text_field :cpkfk_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpkfk_activity_instance_id %>
+    <%= form.text_field :cpkfk_activity_instance_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_created %>
+    <%= form.datetime_select :date_created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_assistant_id %>
+    <%= form.text_field :fk_assistant_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

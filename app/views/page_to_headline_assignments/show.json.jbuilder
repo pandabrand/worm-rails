@@ -1,0 +1,1 @@
+json.partial! "page_to_headline_assignments/page_to_headline_assignment", page_to_headline_assignment: @page_to_headline_assignment

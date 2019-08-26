@@ -1,0 +1,2 @@
+module ApprovalDetailsHelper
+end

@@ -1,0 +1,2 @@
+class MigrationsLock < ApplicationRecord
+end

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Display string:</strong>
+  <%= @cdg_nav_menu_item.display_string %>
+</p>
+
+<p>
+  <strong>Fk parent nav menu item:</strong>
+  <%= @cdg_nav_menu_item.fk_parent_nav_menu_item %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @cdg_nav_menu_item.is_active %>
+</p>
+
+<p>
+  <strong>Page name:</strong>
+  <%= @cdg_nav_menu_item.page_name %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @cdg_nav_menu_item.sort_order %>
+</p>
+
+<p>
+  <strong>Display image filename:</strong>
+  <%= @cdg_nav_menu_item.display_image_filename %>
+</p>
+
+<%= link_to 'Edit', edit_cdg_nav_menu_item_path(@cdg_nav_menu_item) %> |
+<%= link_to 'Back', cdg_nav_menu_items_path %>

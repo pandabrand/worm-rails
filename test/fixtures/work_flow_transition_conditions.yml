@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transitionCode: MyText
+  cpkfk_predecessor: one
+  cpkfk_successor: one
+  is_active: MyString
+  name: MyString
+
+two:
+  transitionCode: MyText
+  cpkfk_predecessor: two
+  cpkfk_successor: two
+  is_active: MyString
+  name: MyString

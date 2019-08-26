@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isregistered:</strong>
+  <%= @designation.isRegistered %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @designation.name %>
+</p>
+
+<p>
+  <strong>Sortorder:</strong>
+  <%= @designation.sortOrder %>
+</p>
+
+<%= link_to 'Edit', edit_designation_path(@designation) %> |
+<%= link_to 'Back', designations_path %>

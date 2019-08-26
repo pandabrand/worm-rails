@@ -1,0 +1,32 @@
+<%= form_with(model: cdg_configuration, local: true) do |form| %>
+  <% if cdg_configuration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cdg_configuration.errors.count, "error") %> prohibited this cdg_configuration from being saved:</h2>
+
+      <ul>
+      <% cdg_configuration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_default %>
+    <%= form.text_field :is_default %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

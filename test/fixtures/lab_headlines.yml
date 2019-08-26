@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fk_template: 1
+  code: MyString
+  fk_ad_matrix_category: one
+  is_active: MyString
+  title: MyString
+  fk_matching_headline_category: one
+  is_accessible: MyString
+  is_accessible_text: MyText
+  headlineColorTypeID: 1
+
+two:
+  fk_template: 1
+  code: MyString
+  fk_ad_matrix_category: two
+  is_active: MyString
+  title: MyString
+  fk_matching_headline_category: two
+  is_accessible: MyString
+  is_accessible_text: MyText
+  headlineColorTypeID: 1

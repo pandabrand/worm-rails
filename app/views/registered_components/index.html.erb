@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Registered Components</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Admin display name</th>
+      <th>Component name</th>
+      <th>Page description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registered_components.each do |registered_component| %>
+      <tr>
+        <td><%= registered_component.admin_display_name %></td>
+        <td><%= registered_component.component_name %></td>
+        <td><%= registered_component.page_description %></td>
+        <td><%= link_to 'Show', registered_component %></td>
+        <td><%= link_to 'Edit', edit_registered_component_path(registered_component) %></td>
+        <td><%= link_to 'Destroy', registered_component, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Registered Component', new_registered_component_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Us States</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sort order</th>
+      <th>Abbreviation</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @us_states.each do |us_state| %>
+      <tr>
+        <td><%= us_state.sort_order %></td>
+        <td><%= us_state.abbreviation %></td>
+        <td><%= us_state.name %></td>
+        <td><%= link_to 'Show', us_state %></td>
+        <td><%= link_to 'Edit', edit_us_state_path(us_state) %></td>
+        <td><%= link_to 'Destroy', us_state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Us State', new_us_state_path %>

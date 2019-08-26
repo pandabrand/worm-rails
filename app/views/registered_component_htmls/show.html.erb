@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text data:</strong>
+  <%= @registered_component_html.text_data %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @registered_component_html.date_created %>
+</p>
+
+<p>
+  <strong>Date modified:</strong>
+  <%= @registered_component_html.date_modified %>
+</p>
+
+<p>
+  <strong>Display name:</strong>
+  <%= @registered_component_html.display_name %>
+</p>
+
+<p>
+  <strong>Fk component:</strong>
+  <%= @registered_component_html.fk_component %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @registered_component_html.name %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @registered_component_html.sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_registered_component_html_path(@registered_component_html) %> |
+<%= link_to 'Back', registered_component_htmls_path %>

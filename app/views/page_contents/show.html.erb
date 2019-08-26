@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @page_content.name %>
+</p>
+
+<p>
+  <strong>Wo html:</strong>
+  <%= @page_content.wo_html %>
+</p>
+
+<p>
+  <strong>Wo wod:</strong>
+  <%= @page_content.wo_wod %>
+</p>
+
+<p>
+  <strong>Is personalized:</strong>
+  <%= @page_content.is_personalized %>
+</p>
+
+<%= link_to 'Edit', edit_page_content_path(@page_content) %> |
+<%= link_to 'Back', page_contents_path %>

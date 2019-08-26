@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @data_ref.value %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @data_ref.type %>
+</p>
+
+<p>
+  <strong>Fk type:</strong>
+  <%= @data_ref.fk_type %>
+</p>
+
+<%= link_to 'Edit', edit_data_ref_path(@data_ref) %> |
+<%= link_to 'Back', data_refs_path %>

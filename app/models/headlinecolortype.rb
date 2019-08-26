@@ -1,0 +1,2 @@
+class Headlinecolortype < ApplicationRecord
+end

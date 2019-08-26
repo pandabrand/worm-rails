@@ -1,0 +1,2 @@
+module CdgFaqsHelper
+end

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cdg_configuration.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @cdg_configuration.value %>
+</p>
+
+<p>
+  <strong>Is default:</strong>
+  <%= @cdg_configuration.is_default %>
+</p>
+
+<%= link_to 'Edit', edit_cdg_configuration_path(@cdg_configuration) %> |
+<%= link_to 'Back', cdg_configurations_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Refs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Type</th>
+      <th>Fk type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_refs.each do |data_ref| %>
+      <tr>
+        <td><%= data_ref.value %></td>
+        <td><%= data_ref.type %></td>
+        <td><%= data_ref.fk_type %></td>
+        <td><%= link_to 'Show', data_ref %></td>
+        <td><%= link_to 'Edit', edit_data_ref_path(data_ref) %></td>
+        <td><%= link_to 'Destroy', data_ref, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data Ref', new_data_ref_path %>

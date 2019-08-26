@@ -1,0 +1,137 @@
+<%= form_with(model: lab_user_info, local: true) do |form| %>
+  <% if lab_user_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lab_user_info.errors.count, "error") %> prohibited this lab_user_info from being saved:</h2>
+
+      <ul>
+      <% lab_user_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_created %>
+    <%= form.datetime_select :date_created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_modified %>
+    <%= form.datetime_select :date_modified %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_last %>
+    <%= form.text_field :name_last %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_first %>
+    <%= form.text_field :name_first %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alternate_address_1 %>
+    <%= form.text_area :alternate_address_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alternate_address_2 %>
+    <%= form.text_area :alternate_address_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alternate_city %>
+    <%= form.text_field :alternate_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alternate_zip %>
+    <%= form.text_field :alternate_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_fax %>
+    <%= form.text_field :business_fax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_phone %>
+    <%= form.text_field :business_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee_id %>
+    <%= form.text_field :employee_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :financial_advisor_id %>
+    <%= form.text_field :financial_advisor_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_alternate_us_state_id %>
+    <%= form.text_field :fk_alternate_us_state_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_branch_id %>
+    <%= form.text_field :fk_branch_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_country_id %>
+    <%= form.text_field :fk_country_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_title1_id %>
+    <%= form.text_field :fk_title1_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_title2_id %>
+    <%= form.text_field :fk_title2_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_region_id %>
+    <%= form.text_field :fk_region_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_area_id %>
+    <%= form.text_field :fk_area_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assistant_email %>
+    <%= form.text_field :assistant_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_roletitle_id %>
+    <%= form.text_field :fk_roletitle_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_client_id %>
+    <%= form.text_field :fk_client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fkTitle3ID %>
+    <%= form.number_field :fkTitle3ID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

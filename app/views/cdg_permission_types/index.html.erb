@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cdg Permission Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sort order</th>
+      <th>Is active</th>
+      <th>Name</th>
+      <th>Fk permission type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdg_permission_types.each do |cdg_permission_type| %>
+      <tr>
+        <td><%= cdg_permission_type.sort_order %></td>
+        <td><%= cdg_permission_type.is_active %></td>
+        <td><%= cdg_permission_type.name %></td>
+        <td><%= cdg_permission_type.fk_permission_type %></td>
+        <td><%= link_to 'Show', cdg_permission_type %></td>
+        <td><%= link_to 'Edit', edit_cdg_permission_type_path(cdg_permission_type) %></td>
+        <td><%= link_to 'Destroy', cdg_permission_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cdg Permission Type', new_cdg_permission_type_path %>

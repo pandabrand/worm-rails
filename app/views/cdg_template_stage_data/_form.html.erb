@@ -1,0 +1,82 @@
+<%= form_with(model: cdg_template_stage_datum, local: true) do |form| %>
+  <% if cdg_template_stage_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cdg_template_stage_datum.errors.count, "error") %> prohibited this cdg_template_stage_datum from being saved:</h2>
+
+      <ul>
+      <% cdg_template_stage_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fk_ad_matrix_category_id %>
+    <%= form.text_field :fk_ad_matrix_category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :path %>
+    <%= form.text_field :path %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.number_field :version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_ad_size %>
+    <%= form.number_field :fk_ad_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_headline %>
+    <%= form.number_field :fk_headline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :xml_info %>
+    <%= form.text_area :xml_info %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thumbnail_path %>
+    <%= form.text_field :thumbnail_path %>
+  </div>
+
+  <div class="field">
+    <%= form.label :instructions %>
+    <%= form.text_area :instructions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proxy_path %>
+    <%= form.text_field :proxy_path %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pdf_filename %>
+    <%= form.text_field :pdf_filename %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

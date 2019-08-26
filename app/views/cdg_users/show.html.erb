@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @cdg_user.date_created %>
+</p>
+
+<p>
+  <strong>Date modified:</strong>
+  <%= @cdg_user.date_modified %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @cdg_user.password %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @cdg_user.username %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @cdg_user.is_active %>
+</p>
+
+<p>
+  <strong>Fk user info:</strong>
+  <%= @cdg_user.fk_user_info %>
+</p>
+
+<p>
+  <strong>Date last logged in:</strong>
+  <%= @cdg_user.date_last_logged_in %>
+</p>
+
+<p>
+  <strong>Skip login profile page:</strong>
+  <%= @cdg_user.skip_login_profile_page %>
+</p>
+
+<p>
+  <strong>New login:</strong>
+  <%= @cdg_user.new_login %>
+</p>
+
+<p>
+  <strong>Fk user:</strong>
+  <%= @cdg_user.fk_user %>
+</p>
+
+<%= link_to 'Edit', edit_cdg_user_path(@cdg_user) %> |
+<%= link_to 'Back', cdg_users_path %>

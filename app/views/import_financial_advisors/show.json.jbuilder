@@ -1,0 +1,1 @@
+json.partial! "import_financial_advisors/import_financial_advisor", import_financial_advisor: @import_financial_advisor

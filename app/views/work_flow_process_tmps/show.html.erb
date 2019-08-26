@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>End condition code:</strong>
+  <%= @work_flow_process_tmp.end_condition_code %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @work_flow_process_tmp.is_active %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @work_flow_process_tmp.name %>
+</p>
+
+<p>
+  <strong>Start code:</strong>
+  <%= @work_flow_process_tmp.start_code %>
+</p>
+
+<p>
+  <strong>Start condition code:</strong>
+  <%= @work_flow_process_tmp.start_condition_code %>
+</p>
+
+<p>
+  <strong>Fk parent process:</strong>
+  <%= @work_flow_process_tmp.fk_parent_process %>
+</p>
+
+<p>
+  <strong>Submit code:</strong>
+  <%= @work_flow_process_tmp.submit_code %>
+</p>
+
+<%= link_to 'Edit', edit_work_flow_process_tmp_path(@work_flow_process_tmp) %> |
+<%= link_to 'Back', work_flow_process_tmps_path %>

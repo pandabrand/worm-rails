@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @lab_region.is_active %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lab_region.name %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @lab_region.region %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @lab_region.sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_lab_region_path(@lab_region) %> |
+<%= link_to 'Back', lab_regions_path %>

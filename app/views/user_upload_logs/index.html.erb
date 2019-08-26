@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Upload Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fk user</th>
+      <th>Type</th>
+      <th>Upload date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_upload_logs.each do |user_upload_log| %>
+      <tr>
+        <td><%= user_upload_log.fk_user %></td>
+        <td><%= user_upload_log.type %></td>
+        <td><%= user_upload_log.upload_date %></td>
+        <td><%= link_to 'Show', user_upload_log %></td>
+        <td><%= link_to 'Edit', edit_user_upload_log_path(user_upload_log) %></td>
+        <td><%= link_to 'Destroy', user_upload_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Upload Log', new_user_upload_log_path %>

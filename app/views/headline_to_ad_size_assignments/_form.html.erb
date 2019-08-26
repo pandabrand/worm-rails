@@ -1,0 +1,32 @@
+<%= form_with(model: headline_to_ad_size_assignment, local: true) do |form| %>
+  <% if headline_to_ad_size_assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(headline_to_ad_size_assignment.errors.count, "error") %> prohibited this headline_to_ad_size_assignment from being saved:</h2>
+
+      <ul>
+      <% headline_to_ad_size_assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpkfk_ad_size_id %>
+    <%= form.text_field :cpkfk_ad_size_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpkfk_headline_id %>
+    <%= form.text_field :cpkfk_headline_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

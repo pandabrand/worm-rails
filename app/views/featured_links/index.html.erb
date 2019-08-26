@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Featured Links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sort order</th>
+      <th>Address</th>
+      <th>Link name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @featured_links.each do |featured_link| %>
+      <tr>
+        <td><%= featured_link.sort_order %></td>
+        <td><%= featured_link.address %></td>
+        <td><%= featured_link.link_name %></td>
+        <td><%= link_to 'Show', featured_link %></td>
+        <td><%= link_to 'Edit', edit_featured_link_path(featured_link) %></td>
+        <td><%= link_to 'Destroy', featured_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Featured Link', new_featured_link_path %>

@@ -1,0 +1,2 @@
+json.extract! import_ma_news, :id, :var_division, :var_district, :var_branch, :var_lastname, :var_firstname, :var_empid, :var_jobtitle, :var_jobcode, :var_address1, :var_address2, :var_city, :var_state, :var_zip, :var_email, :var_workphone, :var_firm, :var_region, :var_workaddressfull, :var_date_added, :complex_id, :complex_name, :created_at, :updated_at
+json.url import_ma_news_url(import_ma_news, format: :json)

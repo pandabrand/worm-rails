@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text_data: MyText
+  date_created: 2019-06-12 22:15:00
+  date_modified: 2019-06-12 22:15:00
+  display_name: MyString
+  fk_component: one
+  name: MyString
+  sort_order: 1
+
+two:
+  text_data: MyText
+  date_created: 2019-06-12 22:15:00
+  date_modified: 2019-06-12 22:15:00
+  display_name: MyString
+  fk_component: two
+  name: MyString
+  sort_order: 1

@@ -1,0 +1,2 @@
+class ImportedMaNew < ApplicationRecord
+end

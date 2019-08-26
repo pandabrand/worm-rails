@@ -1,0 +1,1 @@
+json.partial! "function_to_group_assignments/function_to_group_assignment", function_to_group_assignment: @function_to_group_assignment

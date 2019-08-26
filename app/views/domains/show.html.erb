@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @domain.date_created %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @domain.name %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @domain.sort_order %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @domain.is_active %>
+</p>
+
+<%= link_to 'Edit', edit_domain_path(@domain) %> |
+<%= link_to 'Back', domains_path %>

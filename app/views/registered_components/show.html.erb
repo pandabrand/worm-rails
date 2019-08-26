@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Admin display name:</strong>
+  <%= @registered_component.admin_display_name %>
+</p>
+
+<p>
+  <strong>Component name:</strong>
+  <%= @registered_component.component_name %>
+</p>
+
+<p>
+  <strong>Page description:</strong>
+  <%= @registered_component.page_description %>
+</p>
+
+<%= link_to 'Edit', edit_registered_component_path(@registered_component) %> |
+<%= link_to 'Back', registered_components_path %>

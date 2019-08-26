@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fk creator:</strong>
+  <%= @user_comment.fk_creator %>
+</p>
+
+<p>
+  <strong>Fk user:</strong>
+  <%= @user_comment.fk_user %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @user_comment.value %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @user_comment.date_created %>
+</p>
+
+<%= link_to 'Edit', edit_user_comment_path(@user_comment) %> |
+<%= link_to 'Back', user_comments_path %>

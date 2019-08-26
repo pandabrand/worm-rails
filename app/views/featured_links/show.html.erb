@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @featured_link.sort_order %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @featured_link.address %>
+</p>
+
+<p>
+  <strong>Link name:</strong>
+  <%= @featured_link.link_name %>
+</p>
+
+<%= link_to 'Edit', edit_featured_link_path(@featured_link) %> |
+<%= link_to 'Back', featured_links_path %>

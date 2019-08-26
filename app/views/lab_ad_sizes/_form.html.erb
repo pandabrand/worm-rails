@@ -1,0 +1,37 @@
+<%= form_with(model: lab_ad_size, local: true) do |form| %>
+  <% if lab_ad_size.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lab_ad_size.errors.count, "error") %> prohibited this lab_ad_size from being saved:</h2>
+
+      <ul>
+      <% lab_ad_size.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size_name %>
+    <%= form.text_field :size_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sort_order %>
+    <%= form.number_field :sort_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mediaTypeID %>
+    <%= form.number_field :mediaTypeID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cdg Function Groups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sort order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdg_function_groups.each do |cdg_function_group| %>
+      <tr>
+        <td><%= cdg_function_group.name %></td>
+        <td><%= cdg_function_group.sort_order %></td>
+        <td><%= link_to 'Show', cdg_function_group %></td>
+        <td><%= link_to 'Edit', edit_cdg_function_group_path(cdg_function_group) %></td>
+        <td><%= link_to 'Destroy', cdg_function_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cdg Function Group', new_cdg_function_group_path %>

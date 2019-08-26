@@ -1,0 +1,222 @@
+<%= form_with(model: cdg_order, local: true) do |form| %>
+  <% if cdg_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cdg_order.errors.count, "error") %> prohibited this cdg_order from being saved:</h2>
+
+      <ul>
+      <% cdg_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :contact_email_address %>
+    <%= form.text_field :contact_email_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_name %>
+    <%= form.text_field :contact_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_phone %>
+    <%= form.text_field :contact_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost %>
+    <%= form.text_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_created %>
+    <%= form.datetime_select :date_created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_creator_id %>
+    <%= form.text_field :fk_creator_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_publication_type_id %>
+    <%= form.text_field :fk_publication_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :materials_close_date %>
+    <%= form.datetime_select :materials_close_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publication_name %>
+    <%= form.text_field :publication_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :run_date %>
+    <%= form.datetime_select :run_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seminar_date_time %>
+    <%= form.datetime_select :seminar_date_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seminar_location %>
+    <%= form.text_field :seminar_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :speaker_name_and_title %>
+    <%= form.text_field :speaker_name_and_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :advisor_name %>
+    <%= form.text_field :advisor_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_advisor_title_id %>
+    <%= form.text_field :fk_advisor_title_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :advisor_phone %>
+    <%= form.text_field :advisor_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch_address1 %>
+    <%= form.text_field :branch_address1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch_city %>
+    <%= form.text_field :branch_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_branch_state_id %>
+    <%= form.text_field :fk_branch_state_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_template_id %>
+    <%= form.text_field :fk_template_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_ad_size_id %>
+    <%= form.text_field :fk_ad_size_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comments %>
+    <%= form.text_area :comments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_downloaded %>
+    <%= form.datetime_select :date_downloaded %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_submitted %>
+    <%= form.datetime_select :date_submitted %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_order_status_id %>
+    <%= form.text_field :fk_order_status_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch_address2 %>
+    <%= form.text_field :branch_address2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch_zip %>
+    <%= form.text_field :branch_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch_id %>
+    <%= form.text_field :branch_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch_name %>
+    <%= form.text_field :branch_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_source_branch_id %>
+    <%= form.text_field :fk_source_branch_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_headline_id %>
+    <%= form.text_field :fk_headline_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_saved_page_name %>
+    <%= form.text_field :last_saved_page_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hi_res_uri %>
+    <%= form.text_field :hi_res_uri %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_preview %>
+    <%= form.text_field :last_preview %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_area_id %>
+    <%= form.text_field :fk_area_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_region_id %>
+    <%= form.text_field :fk_region_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_branch_id %>
+    <%= form.text_field :fk_branch_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_legacy %>
+    <%= form.text_field :is_legacy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_assistant_id %>
+    <%= form.text_field :fk_assistant_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :faURL %>
+    <%= form.text_field :faURL %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

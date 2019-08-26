@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  branch: one
+  emp: one
+  financial_advisor: one
+  first_name: MyString
+  job_category: MyString
+  last_name: MyString
+
+two:
+  branch: two
+  emp: two
+  financial_advisor: two
+  first_name: MyString
+  job_category: MyString
+  last_name: MyString

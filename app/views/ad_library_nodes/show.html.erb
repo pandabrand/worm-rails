@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @ad_library_node.date_created %>
+</p>
+
+<p>
+  <strong>Date modified:</strong>
+  <%= @ad_library_node.date_modified %>
+</p>
+
+<p>
+  <strong>Fk latest template:</strong>
+  <%= @ad_library_node.fk_latest_template %>
+</p>
+
+<p>
+  <strong>Fk parent node:</strong>
+  <%= @ad_library_node.fk_parent_node %>
+</p>
+
+<p>
+  <strong>Fk template:</strong>
+  <%= @ad_library_node.fk_template %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @ad_library_node.is_active %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @ad_library_node.level %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ad_library_node.name %>
+</p>
+
+<p>
+  <strong>Thumbnail unique name:</strong>
+  <%= @ad_library_node.thumbnail_unique_name %>
+</p>
+
+<p>
+  <strong>Thumbnail upload name:</strong>
+  <%= @ad_library_node.thumbnail_upload_name %>
+</p>
+
+<%= link_to 'Edit', edit_ad_library_node_path(@ad_library_node) %> |
+<%= link_to 'Back', ad_library_nodes_path %>

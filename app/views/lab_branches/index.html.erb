@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lab Branches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>Fk country</th>
+      <th>Fk us state</th>
+      <th>Name</th>
+      <th>Zip</th>
+      <th>Is active</th>
+      <th>Branch</th>
+      <th>State</th>
+      <th>Fk area</th>
+      <th>Fk complex</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lab_branches.each do |lab_branch| %>
+      <tr>
+        <td><%= lab_branch.address1 %></td>
+        <td><%= lab_branch.address2 %></td>
+        <td><%= lab_branch.city %></td>
+        <td><%= lab_branch.fk_country %></td>
+        <td><%= lab_branch.fk_us_state %></td>
+        <td><%= lab_branch.name %></td>
+        <td><%= lab_branch.zip %></td>
+        <td><%= lab_branch.is_active %></td>
+        <td><%= lab_branch.branch %></td>
+        <td><%= lab_branch.state %></td>
+        <td><%= lab_branch.fk_area %></td>
+        <td><%= lab_branch.fk_complex %></td>
+        <td><%= link_to 'Show', lab_branch %></td>
+        <td><%= link_to 'Edit', edit_lab_branch_path(lab_branch) %></td>
+        <td><%= link_to 'Destroy', lab_branch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lab Branch', new_lab_branch_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Titles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sort order</th>
+      <th>Is active</th>
+      <th>Is title 1</th>
+      <th>Is title 2</th>
+      <th>Is title 3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @titles.each do |title| %>
+      <tr>
+        <td><%= title.name %></td>
+        <td><%= title.sort_order %></td>
+        <td><%= title.is_active %></td>
+        <td><%= title.is_title_1 %></td>
+        <td><%= title.is_title_2 %></td>
+        <td><%= title.is_title_3 %></td>
+        <td><%= link_to 'Show', title %></td>
+        <td><%= link_to 'Edit', edit_title_path(title) %></td>
+        <td><%= link_to 'Destroy', title, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Title', new_title_path %>

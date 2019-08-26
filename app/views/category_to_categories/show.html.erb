@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cp fk copy category:</strong>
+  <%= @category_to_category.cp_fk_copy_category %>
+</p>
+
+<p>
+  <strong>Cp fk destination category:</strong>
+  <%= @category_to_category.cp_fk_destination_category %>
+</p>
+
+<%= link_to 'Edit', edit_category_to_category_path(@category_to_category) %> |
+<%= link_to 'Back', category_to_categories_path %>

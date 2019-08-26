@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Join User To Assistants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpfk user</th>
+      <th>Cpfk assistant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @join_user_to_assistants.each do |join_user_to_assistant| %>
+      <tr>
+        <td><%= join_user_to_assistant.cpfk_user %></td>
+        <td><%= join_user_to_assistant.cpfk_assistant %></td>
+        <td><%= link_to 'Show', join_user_to_assistant %></td>
+        <td><%= link_to 'Edit', edit_join_user_to_assistant_path(join_user_to_assistant) %></td>
+        <td><%= link_to 'Destroy', join_user_to_assistant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Join User To Assistant', new_join_user_to_assistant_path %>

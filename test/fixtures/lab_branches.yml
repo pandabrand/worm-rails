@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address1: MyText
+  address2: MyText
+  city: MyString
+  fk_country: one
+  fk_us_state: one
+  name: MyString
+  zip: MyString
+  is_active: MyString
+  branch: one
+  state: MyString
+  fk_area: one
+  fk_complex: one
+
+two:
+  address1: MyText
+  address2: MyText
+  city: MyString
+  fk_country: two
+  fk_us_state: two
+  name: MyString
+  zip: MyString
+  is_active: MyString
+  branch: two
+  state: MyString
+  fk_area: two
+  fk_complex: two

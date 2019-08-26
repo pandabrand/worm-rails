@@ -1,0 +1,2 @@
+module PageToHeadlineAssignmentsHelper
+end

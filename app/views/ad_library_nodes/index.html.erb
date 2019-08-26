@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ad Library Nodes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date created</th>
+      <th>Date modified</th>
+      <th>Fk latest template</th>
+      <th>Fk parent node</th>
+      <th>Fk template</th>
+      <th>Is active</th>
+      <th>Level</th>
+      <th>Name</th>
+      <th>Thumbnail unique name</th>
+      <th>Thumbnail upload name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ad_library_nodes.each do |ad_library_node| %>
+      <tr>
+        <td><%= ad_library_node.date_created %></td>
+        <td><%= ad_library_node.date_modified %></td>
+        <td><%= ad_library_node.fk_latest_template %></td>
+        <td><%= ad_library_node.fk_parent_node %></td>
+        <td><%= ad_library_node.fk_template %></td>
+        <td><%= ad_library_node.is_active %></td>
+        <td><%= ad_library_node.level %></td>
+        <td><%= ad_library_node.name %></td>
+        <td><%= ad_library_node.thumbnail_unique_name %></td>
+        <td><%= ad_library_node.thumbnail_upload_name %></td>
+        <td><%= link_to 'Show', ad_library_node %></td>
+        <td><%= link_to 'Edit', edit_ad_library_node_path(ad_library_node) %></td>
+        <td><%= link_to 'Destroy', ad_library_node, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ad Library Node', new_ad_library_node_path %>

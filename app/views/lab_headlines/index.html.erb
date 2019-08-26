@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lab Headlines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fk template</th>
+      <th>Code</th>
+      <th>Fk ad matrix category</th>
+      <th>Is active</th>
+      <th>Title</th>
+      <th>Fk matching headline category</th>
+      <th>Is accessible</th>
+      <th>Is accessible text</th>
+      <th>Headlinecolortypeid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lab_headlines.each do |lab_headline| %>
+      <tr>
+        <td><%= lab_headline.fk_template %></td>
+        <td><%= lab_headline.code %></td>
+        <td><%= lab_headline.fk_ad_matrix_category %></td>
+        <td><%= lab_headline.is_active %></td>
+        <td><%= lab_headline.title %></td>
+        <td><%= lab_headline.fk_matching_headline_category %></td>
+        <td><%= lab_headline.is_accessible %></td>
+        <td><%= lab_headline.is_accessible_text %></td>
+        <td><%= lab_headline.headlineColorTypeID %></td>
+        <td><%= link_to 'Show', lab_headline %></td>
+        <td><%= link_to 'Edit', edit_lab_headline_path(lab_headline) %></td>
+        <td><%= link_to 'Destroy', lab_headline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lab Headline', new_lab_headline_path %>

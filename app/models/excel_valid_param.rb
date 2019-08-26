@@ -1,0 +1,2 @@
+class ExcelValidParam < ApplicationRecord
+end

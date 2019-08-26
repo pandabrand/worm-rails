@@ -1,0 +1,22 @@
+<%= form_with(model: migrations_lock, local: true) do |form| %>
+  <% if migrations_lock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(migrations_lock.errors.count, "error") %> prohibited this migrations_lock from being saved:</h2>
+
+      <ul>
+      <% migrations_lock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :is_locked %>
+    <%= form.number_field :is_locked %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

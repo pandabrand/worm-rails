@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SUBMISSION xmlns="http://morganstanley.com/archive_ingestion" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xsi:schemaLocation="http://morganstanley.com/archive_ingestion schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SNAME>WORM INGESTION</SNAME>
+  <SUBMITTER>zqadpato</SUBMITTER>
+  <OBJ>
+    <ONAME>Print Ad</ONAME>
+    <ILM_ORIGINATOR>zqadpato</ILM_ORIGINATOR>
+    <ILM_EON_ID>24944</ILM_EON_ID>
+    <ILM_RCC code="ENS150">
+      <ILM_ISO_COUNTRY>USA</ILM_ISO_COUNTRY>
+      <ILM_REC_DT>2019-06-18</ILM_REC_DT>
+      <LDAP_GROUP>adbuilder_era_archive_uat_access</LDAP_GROUP>
+      <ILM_COST_CTR_NO>575440</ILM_COST_CTR_NO>
+      <ILM_INFO_SEC_CLASS>CONFIDENTIAL</ILM_INFO_SEC_CLASS>
+      <ILM_OFFCL_REC>1</ILM_OFFCL_REC>
+      <ILM_BU_OWNER owner-type="MSSUPERDEPARTMENTCODE">87679</ILM_BU_OWNER>
+      <METADATA field-name="ILM_NAME">Print Ad</METADATA>
+      <METADATA field-name="ILM_OFFCL_REC">official</METADATA>
+      <METADATA field-name="ILM_MS_STATUS">Ready for Download</METADATA>
+      <METADATA field-name="ILM_ACTIVE">inactive</METADATA>
+      <METADATA field-name="ILM_SUB_DATE">2017-03-22 17:44:05 UTC</METADATA>
+      <METADATA field-name="ILM_DESC">BC008 Business Card Bulleted</METADATA>
+      <METADATA field-name="ILM_TRANS_TYPE">Print Ad</METADATA>
+      <METADATA field-name="ILM_ACCT_NO">61207</METADATA>
+      <METADATA field-name="ILM_AMOUNT">0.00</METADATA>
+      <METADATA field-name="ILM_BRANC_NO">100055</METADATA>
+      <METADATA field-name="ILM_INST_NM">PLANO NORTH</METADATA>
+      <METADATA field-name="ILM_REGION">25307</METADATA>
+      <METADATA field-name="ILM_DEPT_CODE">025</METADATA>
+      <METADATA field-name="ILM_CONTACT_NM">David Miller</METADATA>
+      <METADATA field-name="ILM_VEND_NM">AdBuilder</METADATA>
+      <METADATA field-name="ILM_PATH">\\v\region\na\appl\ilink\csm_net\data\era_qa\era_drop\LocalAdBuilder\D:\\Apache2.2\\htdocs\\pickup\\61207_final.pdf</METADATA>
+    </ILM_RCC>
+    <DELIVERY path="string" type="electronic"/>
+  </OBJ>
+</SUBMISSION>

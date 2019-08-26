@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cdg Faqs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Is active</th>
+      <th>Answer</th>
+      <th>Question</th>
+      <th>Sort order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdg_faqs.each do |cdg_faq| %>
+      <tr>
+        <td><%= cdg_faq.is_active %></td>
+        <td><%= cdg_faq.answer %></td>
+        <td><%= cdg_faq.question %></td>
+        <td><%= cdg_faq.sort_order %></td>
+        <td><%= link_to 'Show', cdg_faq %></td>
+        <td><%= link_to 'Edit', edit_cdg_faq_path(cdg_faq) %></td>
+        <td><%= link_to 'Destroy', cdg_faq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cdg Faq', new_cdg_faq_path %>

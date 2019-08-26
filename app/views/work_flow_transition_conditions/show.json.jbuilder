@@ -1,0 +1,1 @@
+json.partial! "work_flow_transition_conditions/work_flow_transition_condition", work_flow_transition_condition: @work_flow_transition_condition

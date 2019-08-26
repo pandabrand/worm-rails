@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Work Flow Transition Conditions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transitioncode</th>
+      <th>Cpkfk predecessor</th>
+      <th>Cpkfk successor</th>
+      <th>Is active</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_flow_transition_conditions.each do |work_flow_transition_condition| %>
+      <tr>
+        <td><%= work_flow_transition_condition.transitionCode %></td>
+        <td><%= work_flow_transition_condition.cpkfk_predecessor %></td>
+        <td><%= work_flow_transition_condition.cpkfk_successor %></td>
+        <td><%= work_flow_transition_condition.is_active %></td>
+        <td><%= work_flow_transition_condition.name %></td>
+        <td><%= link_to 'Show', work_flow_transition_condition %></td>
+        <td><%= link_to 'Edit', edit_work_flow_transition_condition_path(work_flow_transition_condition) %></td>
+        <td><%= link_to 'Destroy', work_flow_transition_condition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work Flow Transition Condition', new_work_flow_transition_condition_path %>

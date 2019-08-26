@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @import_new_branch.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @import_new_branch.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @import_new_branch.city %>
+</p>
+
+<p>
+  <strong>District area:</strong>
+  <%= @import_new_branch.district_area %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @import_new_branch.name %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @import_new_branch.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @import_new_branch.zip %>
+</p>
+
+<%= link_to 'Edit', edit_import_new_branch_path(@import_new_branch) %> |
+<%= link_to 'Back', import_new_branches_path %>

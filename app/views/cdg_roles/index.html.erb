@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cdg Roles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Is active</th>
+      <th>Name</th>
+      <th>Sort order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdg_roles.each do |cdg_role| %>
+      <tr>
+        <td><%= cdg_role.is_active %></td>
+        <td><%= cdg_role.name %></td>
+        <td><%= cdg_role.sort_order %></td>
+        <td><%= link_to 'Show', cdg_role %></td>
+        <td><%= link_to 'Edit', edit_cdg_role_path(cdg_role) %></td>
+        <td><%= link_to 'Destroy', cdg_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cdg Role', new_cdg_role_path %>

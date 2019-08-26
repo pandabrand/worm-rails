@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Login date:</strong>
+  <%= @login.login_date %>
+</p>
+
+<p>
+  <strong>Fk user:</strong>
+  <%= @login.fk_user %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @login.action %>
+</p>
+
+<%= link_to 'Edit', edit_login_path(@login) %> |
+<%= link_to 'Back', logins_path %>

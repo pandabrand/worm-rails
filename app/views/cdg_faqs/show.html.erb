@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @cdg_faq.is_active %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @cdg_faq.answer %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @cdg_faq.question %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @cdg_faq.sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_cdg_faq_path(@cdg_faq) %> |
+<%= link_to 'Back', cdg_faqs_path %>

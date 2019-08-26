@@ -1,0 +1,27 @@
+<%= form_with(model: tff_to_tffgroup, local: true) do |form| %>
+  <% if tff_to_tffgroup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tff_to_tffgroup.errors.count, "error") %> prohibited this tff_to_tffgroup from being saved:</h2>
+
+      <ul>
+      <% tff_to_tffgroup.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pk_id %>
+    <%= form.text_field :pk_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pk_id1 %>
+    <%= form.number_field :pk_id1 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

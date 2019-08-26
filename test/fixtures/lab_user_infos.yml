@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_created: 2019-06-12 22:14:06
+  date_modified: 2019-06-12 22:14:06
+  is_active: MyString
+  name_last: MyString
+  name_first: MyString
+  alternate_address_1: MyText
+  alternate_address_2: MyText
+  alternate_city: MyString
+  alternate_zip: MyString
+  business_fax: MyString
+  business_phone: MyString
+  employee: one
+  financial_advisor: one
+  fk_alternate_us_state: one
+  fk_branch: one
+  fk_country: one
+  fk_title1: one
+  fk_title2: one
+  fk_region: one
+  fk_area: one
+  assistant_email: MyString
+  fk_roletitle: one
+  fk_client: one
+  fkTitle3ID: 1
+
+two:
+  date_created: 2019-06-12 22:14:06
+  date_modified: 2019-06-12 22:14:06
+  is_active: MyString
+  name_last: MyString
+  name_first: MyString
+  alternate_address_1: MyText
+  alternate_address_2: MyText
+  alternate_city: MyString
+  alternate_zip: MyString
+  business_fax: MyString
+  business_phone: MyString
+  employee: two
+  financial_advisor: two
+  fk_alternate_us_state: two
+  fk_branch: two
+  fk_country: two
+  fk_title1: two
+  fk_title2: two
+  fk_region: two
+  fk_area: two
+  assistant_email: MyString
+  fk_roletitle: two
+  fk_client: two
+  fkTitle3ID: 1

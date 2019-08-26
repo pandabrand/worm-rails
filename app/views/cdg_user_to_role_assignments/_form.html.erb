@@ -1,0 +1,42 @@
+<%= form_with(model: cdg_user_to_role_assignment, local: true) do |form| %>
+  <% if cdg_user_to_role_assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cdg_user_to_role_assignment.errors.count, "error") %> prohibited this cdg_user_to_role_assignment from being saved:</h2>
+
+      <ul>
+      <% cdg_user_to_role_assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpkfk_role_id %>
+    <%= form.text_field :cpkfk_role_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpkfk_user_id %>
+    <%= form.text_field :cpkfk_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :role_sort_order %>
+    <%= form.number_field :role_sort_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_sort_order %>
+    <%= form.number_field :user_sort_order %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

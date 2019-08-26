@@ -1,0 +1,1 @@
+json.partial! "cdg_user_to_role_assignments/cdg_user_to_role_assignment", cdg_user_to_role_assignment: @cdg_user_to_role_assignment

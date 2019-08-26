@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Info To Branches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpkfk branch</th>
+      <th>Cpkfk user info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_info_to_branches.each do |user_info_to_branch| %>
+      <tr>
+        <td><%= user_info_to_branch.cpkfk_branch %></td>
+        <td><%= user_info_to_branch.cpkfk_user_info %></td>
+        <td><%= link_to 'Show', user_info_to_branch %></td>
+        <td><%= link_to 'Edit', edit_user_info_to_branch_path(user_info_to_branch) %></td>
+        <td><%= link_to 'Destroy', user_info_to_branch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Info To Branch', new_user_info_to_branch_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fk user:</strong>
+  <%= @user_upload_log.fk_user %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @user_upload_log.type %>
+</p>
+
+<p>
+  <strong>Upload date:</strong>
+  <%= @user_upload_log.upload_date %>
+</p>
+
+<%= link_to 'Edit', edit_user_upload_log_path(@user_upload_log) %> |
+<%= link_to 'Back', user_upload_logs_path %>

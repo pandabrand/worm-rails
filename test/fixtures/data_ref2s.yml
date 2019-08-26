@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: MyString
+  type: 
+  fk_type: one
+
+two:
+  value: MyString
+  type: 
+  fk_type: two

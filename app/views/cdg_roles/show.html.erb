@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @cdg_role.is_active %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cdg_role.name %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @cdg_role.sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_cdg_role_path(@cdg_role) %> |
+<%= link_to 'Back', cdg_roles_path %>

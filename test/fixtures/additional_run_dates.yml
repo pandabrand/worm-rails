@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pk: one
+  run_date: 2019-06-12 22:08:18
+  fk_order: one
+
+two:
+  pk: two
+  run_date: 2019-06-12 22:08:18
+  fk_order: two

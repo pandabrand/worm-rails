@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Form Field Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Fk data ref</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @form_field_types.each do |form_field_type| %>
+      <tr>
+        <td><%= form_field_type.type %></td>
+        <td><%= form_field_type.fk_data_ref %></td>
+        <td><%= link_to 'Show', form_field_type %></td>
+        <td><%= link_to 'Edit', edit_form_field_type_path(form_field_type) %></td>
+        <td><%= link_to 'Destroy', form_field_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Form Field Type', new_form_field_type_path %>

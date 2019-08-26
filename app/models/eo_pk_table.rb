@@ -1,0 +1,2 @@
+class EoPkTable < ApplicationRecord
+end

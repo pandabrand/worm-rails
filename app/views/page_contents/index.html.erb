@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Page Contents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Wo html</th>
+      <th>Wo wod</th>
+      <th>Is personalized</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @page_contents.each do |page_content| %>
+      <tr>
+        <td><%= page_content.name %></td>
+        <td><%= page_content.wo_html %></td>
+        <td><%= page_content.wo_wod %></td>
+        <td><%= page_content.is_personalized %></td>
+        <td><%= link_to 'Show', page_content %></td>
+        <td><%= link_to 'Edit', edit_page_content_path(page_content) %></td>
+        <td><%= link_to 'Destroy', page_content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Page Content', new_page_content_path %>

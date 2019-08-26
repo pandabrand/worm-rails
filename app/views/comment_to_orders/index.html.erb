@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comment To Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpkfk comment</th>
+      <th>Cpkfk order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comment_to_orders.each do |comment_to_order| %>
+      <tr>
+        <td><%= comment_to_order.cpkfk_comment %></td>
+        <td><%= comment_to_order.cpkfk_order %></td>
+        <td><%= link_to 'Show', comment_to_order %></td>
+        <td><%= link_to 'Edit', edit_comment_to_order_path(comment_to_order) %></td>
+        <td><%= link_to 'Destroy', comment_to_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment To Order', new_comment_to_order_path %>

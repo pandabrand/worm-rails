@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Portrait Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date uploaded</th>
+      <th>File size</th>
+      <th>File type</th>
+      <th>Filename</th>
+      <th>Fk order</th>
+      <th>Fk userinfo</th>
+      <th>Height</th>
+      <th>Orig filename</th>
+      <th>Width</th>
+      <th>Isuserdefault</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @portrait_images.each do |portrait_image| %>
+      <tr>
+        <td><%= portrait_image.date_uploaded %></td>
+        <td><%= portrait_image.file_size %></td>
+        <td><%= portrait_image.file_type %></td>
+        <td><%= portrait_image.filename %></td>
+        <td><%= portrait_image.fk_order %></td>
+        <td><%= portrait_image.fk_userinfo %></td>
+        <td><%= portrait_image.height %></td>
+        <td><%= portrait_image.orig_filename %></td>
+        <td><%= portrait_image.width %></td>
+        <td><%= portrait_image.isUserDefault %></td>
+        <td><%= link_to 'Show', portrait_image %></td>
+        <td><%= link_to 'Edit', edit_portrait_image_path(portrait_image) %></td>
+        <td><%= link_to 'Destroy', portrait_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Portrait Image', new_portrait_image_path %>

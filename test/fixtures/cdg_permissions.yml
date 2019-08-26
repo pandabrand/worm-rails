@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agent_type: MyString
+  fk_user_agent: one
+  fk_function_resource: one
+  permission: MyString
+  resource_type: MyString
+  is_active: MyString
+  fk_role_agent: one
+  fk_function_group_resource: one
+  fk_nav_menu_item_resource: one
+  fk_permission_type: one
+
+two:
+  agent_type: MyString
+  fk_user_agent: two
+  fk_function_resource: two
+  permission: MyString
+  resource_type: MyString
+  is_active: MyString
+  fk_role_agent: two
+  fk_function_group_resource: two
+  fk_nav_menu_item_resource: two
+  fk_permission_type: two

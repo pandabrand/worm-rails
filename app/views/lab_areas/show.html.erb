@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fk region:</strong>
+  <%= @lab_area.fk_region %>
+</p>
+
+<p>
+  <strong>Area number:</strong>
+  <%= @lab_area.area_number %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @lab_area.is_active %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lab_area.name %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @lab_area.sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_lab_area_path(@lab_area) %> |
+<%= link_to 'Back', lab_areas_path %>

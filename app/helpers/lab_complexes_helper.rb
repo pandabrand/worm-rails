@@ -1,0 +1,2 @@
+module LabComplexesHelper
+end

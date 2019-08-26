@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_active: MyString
+  name: MyString
+  fk_role: one
+
+two:
+  is_active: MyString
+  name: MyString
+  fk_role: two

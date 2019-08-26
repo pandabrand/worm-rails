@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category name:</strong>
+  <%= @ad_matrix_category.category_name %>
+</p>
+
+<p>
+  <strong>Fk parent category:</strong>
+  <%= @ad_matrix_category.fk_parent_category %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @ad_matrix_category.is_active %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @ad_matrix_category.sort_order %>
+</p>
+
+<p>
+  <strong>Fk featured headline:</strong>
+  <%= @ad_matrix_category.fk_featured_headline %>
+</p>
+
+<p>
+  <strong>Date embargo:</strong>
+  <%= @ad_matrix_category.date_embargo %>
+</p>
+
+<p>
+  <strong>Date expiration:</strong>
+  <%= @ad_matrix_category.date_expiration %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @ad_matrix_category.level %>
+</p>
+
+<p>
+  <strong>Thumbnail unique name:</strong>
+  <%= @ad_matrix_category.thumbnail_unique_name %>
+</p>
+
+<p>
+  <strong>Thumbnail upload name:</strong>
+  <%= @ad_matrix_category.thumbnail_upload_name %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @ad_matrix_category.date_created %>
+</p>
+
+<p>
+  <strong>Date modified:</strong>
+  <%= @ad_matrix_category.date_modified %>
+</p>
+
+<p>
+  <strong>Fk latest template:</strong>
+  <%= @ad_matrix_category.fk_latest_template %>
+</p>
+
+<p>
+  <strong>Copied headline:</strong>
+  <%= @ad_matrix_category.copied_headline %>
+</p>
+
+<%= link_to 'Edit', edit_ad_matrix_category_path(@ad_matrix_category) %> |
+<%= link_to 'Back', ad_matrix_categories_path %>

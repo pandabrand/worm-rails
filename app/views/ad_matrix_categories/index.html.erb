@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ad Matrix Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category name</th>
+      <th>Fk parent category</th>
+      <th>Is active</th>
+      <th>Sort order</th>
+      <th>Fk featured headline</th>
+      <th>Date embargo</th>
+      <th>Date expiration</th>
+      <th>Level</th>
+      <th>Thumbnail unique name</th>
+      <th>Thumbnail upload name</th>
+      <th>Date created</th>
+      <th>Date modified</th>
+      <th>Fk latest template</th>
+      <th>Copied headline</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ad_matrix_categories.each do |ad_matrix_category| %>
+      <tr>
+        <td><%= ad_matrix_category.category_name %></td>
+        <td><%= ad_matrix_category.fk_parent_category %></td>
+        <td><%= ad_matrix_category.is_active %></td>
+        <td><%= ad_matrix_category.sort_order %></td>
+        <td><%= ad_matrix_category.fk_featured_headline %></td>
+        <td><%= ad_matrix_category.date_embargo %></td>
+        <td><%= ad_matrix_category.date_expiration %></td>
+        <td><%= ad_matrix_category.level %></td>
+        <td><%= ad_matrix_category.thumbnail_unique_name %></td>
+        <td><%= ad_matrix_category.thumbnail_upload_name %></td>
+        <td><%= ad_matrix_category.date_created %></td>
+        <td><%= ad_matrix_category.date_modified %></td>
+        <td><%= ad_matrix_category.fk_latest_template %></td>
+        <td><%= ad_matrix_category.copied_headline %></td>
+        <td><%= link_to 'Show', ad_matrix_category %></td>
+        <td><%= link_to 'Edit', edit_ad_matrix_category_path(ad_matrix_category) %></td>
+        <td><%= link_to 'Destroy', ad_matrix_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ad Matrix Category', new_ad_matrix_category_path %>

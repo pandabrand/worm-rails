@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Headline sort order:</strong>
+  <%= @page_to_headline_assignment.headline_sort_order %>
+</p>
+
+<p>
+  <strong>Cpkfk headline:</strong>
+  <%= @page_to_headline_assignment.cpkfk_headline %>
+</p>
+
+<p>
+  <strong>Cpkfk page content:</strong>
+  <%= @page_to_headline_assignment.cpkfk_page_content %>
+</p>
+
+<%= link_to 'Edit', edit_page_to_headline_assignment_path(@page_to_headline_assignment) %> |
+<%= link_to 'Back', page_to_headline_assignments_path %>

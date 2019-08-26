@@ -1,0 +1,2 @@
+module CdgOrdersHelper
+end

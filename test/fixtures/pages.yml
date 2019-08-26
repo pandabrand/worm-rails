@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  duration: 1
+  is_master: MyString
+  templateID: 1
+  preview: MyString
+  sortOrder: 1
+
+two:
+  duration: 1
+  is_master: MyString
+  templateID: 1
+  preview: MyString
+  sortOrder: 1

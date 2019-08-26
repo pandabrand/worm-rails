@@ -1,0 +1,22 @@
+<%= form_with(model: eo_pk_table, local: true) do |form| %>
+  <% if eo_pk_table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(eo_pk_table.errors.count, "error") %> prohibited this eo_pk_table from being saved:</h2>
+
+      <ul>
+      <% eo_pk_table.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :PK %>
+    <%= form.number_field :PK %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

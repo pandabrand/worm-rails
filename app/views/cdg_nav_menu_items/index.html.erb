@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cdg Nav Menu Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Display string</th>
+      <th>Fk parent nav menu item</th>
+      <th>Is active</th>
+      <th>Page name</th>
+      <th>Sort order</th>
+      <th>Display image filename</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdg_nav_menu_items.each do |cdg_nav_menu_item| %>
+      <tr>
+        <td><%= cdg_nav_menu_item.display_string %></td>
+        <td><%= cdg_nav_menu_item.fk_parent_nav_menu_item %></td>
+        <td><%= cdg_nav_menu_item.is_active %></td>
+        <td><%= cdg_nav_menu_item.page_name %></td>
+        <td><%= cdg_nav_menu_item.sort_order %></td>
+        <td><%= cdg_nav_menu_item.display_image_filename %></td>
+        <td><%= link_to 'Show', cdg_nav_menu_item %></td>
+        <td><%= link_to 'Edit', edit_cdg_nav_menu_item_path(cdg_nav_menu_item) %></td>
+        <td><%= link_to 'Destroy', cdg_nav_menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cdg Nav Menu Item', new_cdg_nav_menu_item_path %>

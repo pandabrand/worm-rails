@@ -1,0 +1,32 @@
+<%= form_with(model: featured_headline, local: true) do |form| %>
+  <% if featured_headline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(featured_headline.errors.count, "error") %> prohibited this featured_headline from being saved:</h2>
+
+      <ul>
+      <% featured_headline.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tag_line %>
+    <%= form.text_field :tag_line %>
+  </div>
+
+  <div class="field">
+    <%= form.label :headline_sort_order %>
+    <%= form.number_field :headline_sort_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_headline_id %>
+    <%= form.text_field :fk_headline_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

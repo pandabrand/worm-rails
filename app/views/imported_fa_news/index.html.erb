@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Imported Fa News</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Var email</th>
+      <th>Var division</th>
+      <th>Var district</th>
+      <th>Var branch</th>
+      <th>Var firstname</th>
+      <th>Var lastname</th>
+      <th>Var empid</th>
+      <th>Var jobcode</th>
+      <th>Var jobtitle</th>
+      <th>Var workaddressfull</th>
+      <th>Var city</th>
+      <th>Var state</th>
+      <th>Var zip</th>
+      <th>Var workphone</th>
+      <th>Var firm</th>
+      <th>Var region</th>
+      <th>Var date added</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @imported_fa_news.each do |imported_fa_news| %>
+      <tr>
+        <td><%= imported_fa_news.var_email %></td>
+        <td><%= imported_fa_news.var_division %></td>
+        <td><%= imported_fa_news.var_district %></td>
+        <td><%= imported_fa_news.var_branch %></td>
+        <td><%= imported_fa_news.var_firstname %></td>
+        <td><%= imported_fa_news.var_lastname %></td>
+        <td><%= imported_fa_news.var_empid %></td>
+        <td><%= imported_fa_news.var_jobcode %></td>
+        <td><%= imported_fa_news.var_jobtitle %></td>
+        <td><%= imported_fa_news.var_workaddressfull %></td>
+        <td><%= imported_fa_news.var_city %></td>
+        <td><%= imported_fa_news.var_state %></td>
+        <td><%= imported_fa_news.var_zip %></td>
+        <td><%= imported_fa_news.var_workphone %></td>
+        <td><%= imported_fa_news.var_firm %></td>
+        <td><%= imported_fa_news.var_region %></td>
+        <td><%= imported_fa_news.var_date_added %></td>
+        <td><%= link_to 'Show', imported_fa_news %></td>
+        <td><%= link_to 'Edit', edit_imported_fa_news_path(imported_fa_news) %></td>
+        <td><%= link_to 'Destroy', imported_fa_news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Imported Fa News', new_imported_fa_news_path %>

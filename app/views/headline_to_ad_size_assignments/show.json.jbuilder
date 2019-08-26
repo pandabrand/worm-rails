@@ -1,0 +1,1 @@
+json.partial! "headline_to_ad_size_assignments/headline_to_ad_size_assignment", headline_to_ad_size_assignment: @headline_to_ad_size_assignment

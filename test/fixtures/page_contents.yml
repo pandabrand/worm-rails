@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  wo_html: MyText
+  wo_wod: MyText
+  is_personalized: MyString
+
+two:
+  name: MyString
+  wo_html: MyText
+  wo_wod: MyText
+  is_personalized: MyString

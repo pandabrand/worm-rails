@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @lab_ad_size.is_active %>
+</p>
+
+<p>
+  <strong>Size name:</strong>
+  <%= @lab_ad_size.size_name %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @lab_ad_size.sort_order %>
+</p>
+
+<p>
+  <strong>Mediatypeid:</strong>
+  <%= @lab_ad_size.mediaTypeID %>
+</p>
+
+<%= link_to 'Edit', edit_lab_ad_size_path(@lab_ad_size) %> |
+<%= link_to 'Back', lab_ad_sizes_path %>

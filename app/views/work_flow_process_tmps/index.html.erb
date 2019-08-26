@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Work Flow Process Tmps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>End condition code</th>
+      <th>Is active</th>
+      <th>Name</th>
+      <th>Start code</th>
+      <th>Start condition code</th>
+      <th>Fk parent process</th>
+      <th>Submit code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_flow_process_tmps.each do |work_flow_process_tmp| %>
+      <tr>
+        <td><%= work_flow_process_tmp.end_condition_code %></td>
+        <td><%= work_flow_process_tmp.is_active %></td>
+        <td><%= work_flow_process_tmp.name %></td>
+        <td><%= work_flow_process_tmp.start_code %></td>
+        <td><%= work_flow_process_tmp.start_condition_code %></td>
+        <td><%= work_flow_process_tmp.fk_parent_process %></td>
+        <td><%= work_flow_process_tmp.submit_code %></td>
+        <td><%= link_to 'Show', work_flow_process_tmp %></td>
+        <td><%= link_to 'Edit', edit_work_flow_process_tmp_path(work_flow_process_tmp) %></td>
+        <td><%= link_to 'Destroy', work_flow_process_tmp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work Flow Process Tmp', new_work_flow_process_tmp_path %>

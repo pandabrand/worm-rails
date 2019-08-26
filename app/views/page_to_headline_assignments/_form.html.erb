@@ -1,0 +1,32 @@
+<%= form_with(model: page_to_headline_assignment, local: true) do |form| %>
+  <% if page_to_headline_assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(page_to_headline_assignment.errors.count, "error") %> prohibited this page_to_headline_assignment from being saved:</h2>
+
+      <ul>
+      <% page_to_headline_assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :headline_sort_order %>
+    <%= form.number_field :headline_sort_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpkfk_headline_id %>
+    <%= form.text_field :cpkfk_headline_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpkfk_page_content_id %>
+    <%= form.text_field :cpkfk_page_content_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

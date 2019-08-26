@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cdg Templates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fk ad matrix category</th>
+      <th>Code</th>
+      <th>Title</th>
+      <th>Is active</th>
+      <th>Path</th>
+      <th>Version</th>
+      <th>Fk ad size</th>
+      <th>Fk headline</th>
+      <th>Xml info</th>
+      <th>Thumbnail path</th>
+      <th>Instructions</th>
+      <th>Proxy path</th>
+      <th>Pdf filename</th>
+      <th>Mediatype</th>
+      <th>Tweenduration</th>
+      <th>Tweenframes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdg_templates.each do |cdg_template| %>
+      <tr>
+        <td><%= cdg_template.fk_ad_matrix_category %></td>
+        <td><%= cdg_template.code %></td>
+        <td><%= cdg_template.title %></td>
+        <td><%= cdg_template.is_active %></td>
+        <td><%= cdg_template.path %></td>
+        <td><%= cdg_template.version %></td>
+        <td><%= cdg_template.fk_ad_size %></td>
+        <td><%= cdg_template.fk_headline %></td>
+        <td><%= cdg_template.xml_info %></td>
+        <td><%= cdg_template.thumbnail_path %></td>
+        <td><%= cdg_template.instructions %></td>
+        <td><%= cdg_template.proxy_path %></td>
+        <td><%= cdg_template.pdf_filename %></td>
+        <td><%= cdg_template.mediatype %></td>
+        <td><%= cdg_template.tweenDuration %></td>
+        <td><%= cdg_template.tweenFrames %></td>
+        <td><%= link_to 'Show', cdg_template %></td>
+        <td><%= link_to 'Edit', edit_cdg_template_path(cdg_template) %></td>
+        <td><%= link_to 'Destroy', cdg_template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cdg Template', new_cdg_template_path %>

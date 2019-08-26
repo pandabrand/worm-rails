@@ -1,0 +1,47 @@
+<%= form_with(model: import_financial_advisor, local: true) do |form| %>
+  <% if import_financial_advisor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(import_financial_advisor.errors.count, "error") %> prohibited this import_financial_advisor from being saved:</h2>
+
+      <ul>
+      <% import_financial_advisor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :branch_id %>
+    <%= form.text_field :branch_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_id %>
+    <%= form.text_field :emp_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :financial_advisor_id %>
+    <%= form.text_field :financial_advisor_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_category %>
+    <%= form.text_field :job_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

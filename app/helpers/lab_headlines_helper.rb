@@ -1,0 +1,2 @@
+module LabHeadlinesHelper
+end

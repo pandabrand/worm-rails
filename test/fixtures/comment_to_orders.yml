@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpkfk_comment: one
+  cpkfk_order: one
+
+two:
+  cpkfk_comment: two
+  cpkfk_order: two

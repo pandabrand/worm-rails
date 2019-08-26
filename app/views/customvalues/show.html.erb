@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customvalue.name %>
+</p>
+
+<p>
+  <strong>Templateformfieldid:</strong>
+  <%= @customvalue.templateFormFieldID %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @customvalue.value %>
+</p>
+
+<%= link_to 'Edit', edit_customvalue_path(@customvalue) %> |
+<%= link_to 'Back', customvalues_path %>

@@ -1,0 +1,82 @@
+<%= form_with(model: approval_detail, local: true) do |form| %>
+  <% if approval_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(approval_detail.errors.count, "error") %> prohibited this approval_detail from being saved:</h2>
+
+      <ul>
+      <% approval_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fk_role_id %>
+    <%= form.text_field :fk_role_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comments %>
+    <%= form.text_area :comments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_created %>
+    <%= form.datetime_select :date_created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_order_id %>
+    <%= form.text_field :fk_order_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_order_item_id %>
+    <%= form.text_field :fk_order_item_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_user_id %>
+    <%= form.text_field :fk_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_work_activity_instance_id %>
+    <%= form.text_field :fk_work_activity_instance_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :media_id %>
+    <%= form.text_field :media_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order_number %>
+    <%= form.text_field :order_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status_description %>
+    <%= form.text_field :status_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_role %>
+    <%= form.text_field :user_role %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_assistant_id %>
+    <%= form.text_field :fk_assistant_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date uploaded:</strong>
+  <%= @portrait_image.date_uploaded %>
+</p>
+
+<p>
+  <strong>File size:</strong>
+  <%= @portrait_image.file_size %>
+</p>
+
+<p>
+  <strong>File type:</strong>
+  <%= @portrait_image.file_type %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @portrait_image.filename %>
+</p>
+
+<p>
+  <strong>Fk order:</strong>
+  <%= @portrait_image.fk_order %>
+</p>
+
+<p>
+  <strong>Fk userinfo:</strong>
+  <%= @portrait_image.fk_userinfo %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @portrait_image.height %>
+</p>
+
+<p>
+  <strong>Orig filename:</strong>
+  <%= @portrait_image.orig_filename %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @portrait_image.width %>
+</p>
+
+<p>
+  <strong>Isuserdefault:</strong>
+  <%= @portrait_image.isUserDefault %>
+</p>
+
+<%= link_to 'Edit', edit_portrait_image_path(@portrait_image) %> |
+<%= link_to 'Back', portrait_images_path %>

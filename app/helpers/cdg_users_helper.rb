@@ -1,0 +1,2 @@
+module CdgUsersHelper
+end

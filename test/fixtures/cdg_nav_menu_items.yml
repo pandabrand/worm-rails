@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  display_string: MyString
+  fk_parent_nav_menu_item: one
+  is_active: MyString
+  page_name: MyString
+  sort_order: 1
+  display_image_filename: MyString
+
+two:
+  display_string: MyString
+  fk_parent_nav_menu_item: two
+  is_active: MyString
+  page_name: MyString
+  sort_order: 1
+  display_image_filename: MyString

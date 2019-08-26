@@ -1,0 +1,37 @@
+<%= form_with(model: excel_valid_param, local: true) do |form| %>
+  <% if excel_valid_param.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(excel_valid_param.errors.count, "error") %> prohibited this excel_valid_param from being saved:</h2>
+
+      <ul>
+      <% excel_valid_param.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :is_required %>
+    <%= form.text_field :is_required %>
+  </div>
+
+  <div class="field">
+    <%= form.label :excel_col_name %>
+    <%= form.text_field :excel_col_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :excel_col_number %>
+    <%= form.number_field :excel_col_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

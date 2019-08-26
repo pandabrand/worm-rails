@@ -1,0 +1,67 @@
+<%= form_with(model: cdg_permission, local: true) do |form| %>
+  <% if cdg_permission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cdg_permission.errors.count, "error") %> prohibited this cdg_permission from being saved:</h2>
+
+      <ul>
+      <% cdg_permission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :agent_type %>
+    <%= form.text_field :agent_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_user_agent_id %>
+    <%= form.text_field :fk_user_agent_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_function_resource_id %>
+    <%= form.text_field :fk_function_resource_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :permission %>
+    <%= form.text_field :permission %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resource_type %>
+    <%= form.text_field :resource_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_role_agent_id %>
+    <%= form.text_field :fk_role_agent_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_function_group_resource_id %>
+    <%= form.text_field :fk_function_group_resource_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_nav_menu_item_resource_id %>
+    <%= form.text_field :fk_nav_menu_item_resource_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_permission_type_id %>
+    <%= form.text_field :fk_permission_type_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

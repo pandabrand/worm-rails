@@ -1,0 +1,2 @@
+class CdgFaq < ApplicationRecord
+end

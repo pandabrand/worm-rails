@@ -1,0 +1,32 @@
+<%= form_with(model: title2, local: true) do |form| %>
+  <% if title2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(title2.errors.count, "error") %> prohibited this title2 from being saved:</h2>
+
+      <ul>
+      <% title2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sort_order %>
+    <%= form.number_field :sort_order %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

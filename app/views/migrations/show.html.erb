@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @migration.name %>
+</p>
+
+<p>
+  <strong>Batch:</strong>
+  <%= @migration.batch %>
+</p>
+
+<p>
+  <strong>Migration time:</strong>
+  <%= @migration.migration_time %>
+</p>
+
+<%= link_to 'Edit', edit_migration_path(@migration) %> |
+<%= link_to 'Back', migrations_path %>

@@ -1,0 +1,67 @@
+<%= form_with(model: cdg_user, local: true) do |form| %>
+  <% if cdg_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cdg_user.errors.count, "error") %> prohibited this cdg_user from being saved:</h2>
+
+      <ul>
+      <% cdg_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_created %>
+    <%= form.datetime_select :date_created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_modified %>
+    <%= form.datetime_select :date_modified %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.text_field :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_user_info_id %>
+    <%= form.text_field :fk_user_info_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_last_logged_in %>
+    <%= form.datetime_select :date_last_logged_in %>
+  </div>
+
+  <div class="field">
+    <%= form.label :skip_login_profile_page %>
+    <%= form.text_field :skip_login_profile_page %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_login %>
+    <%= form.text_field :new_login %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fk_user_id %>
+    <%= form.text_field :fk_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

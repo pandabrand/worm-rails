@@ -1,0 +1,27 @@
+<%= form_with(model: designationformfieldvalue, local: true) do |form| %>
+  <% if designationformfieldvalue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(designationformfieldvalue.errors.count, "error") %> prohibited this designationformfieldvalue from being saved:</h2>
+
+      <ul>
+      <% designationformfieldvalue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :designationPk_id %>
+    <%= form.text_field :designationPk_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :formFieldValuePkID %>
+    <%= form.number_field :formFieldValuePkID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

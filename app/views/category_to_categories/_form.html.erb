@@ -1,0 +1,27 @@
+<%= form_with(model: category_to_category, local: true) do |form| %>
+  <% if category_to_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(category_to_category.errors.count, "error") %> prohibited this category_to_category from being saved:</h2>
+
+      <ul>
+      <% category_to_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cp_fk_copy_category_id %>
+    <%= form.text_field :cp_fk_copy_category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cp_fk_destination_category_id %>
+    <%= form.text_field :cp_fk_destination_category_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

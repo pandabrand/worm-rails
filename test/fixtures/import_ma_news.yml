@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  var_division: MyString
+  var_district: MyString
+  var_branch: MyString
+  var_lastname: MyString
+  var_firstname: MyString
+  var_empid: MyString
+  var_jobtitle: MyString
+  var_jobcode: MyString
+  var_address1: MyString
+  var_address2: MyString
+  var_city: MyString
+  var_state: MyString
+  var_zip: MyString
+  var_email: MyString
+  var_workphone: MyString
+  var_firm: MyString
+  var_region: MyString
+  var_workaddressfull: MyString
+  var_date_added: 2019-06-12 22:13:04
+  complex: one
+  complex_name: MyString
+
+two:
+  var_division: MyString
+  var_district: MyString
+  var_branch: MyString
+  var_lastname: MyString
+  var_firstname: MyString
+  var_empid: MyString
+  var_jobtitle: MyString
+  var_jobcode: MyString
+  var_address1: MyString
+  var_address2: MyString
+  var_city: MyString
+  var_state: MyString
+  var_zip: MyString
+  var_email: MyString
+  var_workphone: MyString
+  var_firm: MyString
+  var_region: MyString
+  var_workaddressfull: MyString
+  var_date_added: 2019-06-12 22:13:04
+  complex: two
+  complex_name: MyString

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lab Areas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fk region</th>
+      <th>Area number</th>
+      <th>Is active</th>
+      <th>Name</th>
+      <th>Sort order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lab_areas.each do |lab_area| %>
+      <tr>
+        <td><%= lab_area.fk_region %></td>
+        <td><%= lab_area.area_number %></td>
+        <td><%= lab_area.is_active %></td>
+        <td><%= lab_area.name %></td>
+        <td><%= lab_area.sort_order %></td>
+        <td><%= link_to 'Show', lab_area %></td>
+        <td><%= link_to 'Edit', edit_lab_area_path(lab_area) %></td>
+        <td><%= link_to 'Destroy', lab_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lab Area', new_lab_area_path %>

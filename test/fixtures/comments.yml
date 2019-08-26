@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_created: 2019-06-12 22:10:41
+  date_modified: 2019-06-12 22:10:41
+  fk_creator: one
+  value: MyText
+  fk_assistant: one
+
+two:
+  date_created: 2019-06-12 22:10:41
+  date_modified: 2019-06-12 22:10:41
+  fk_creator: two
+  value: MyText
+  fk_assistant: two

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Agent type:</strong>
+  <%= @cdg_permission.agent_type %>
+</p>
+
+<p>
+  <strong>Fk user agent:</strong>
+  <%= @cdg_permission.fk_user_agent %>
+</p>
+
+<p>
+  <strong>Fk function resource:</strong>
+  <%= @cdg_permission.fk_function_resource %>
+</p>
+
+<p>
+  <strong>Permission:</strong>
+  <%= @cdg_permission.permission %>
+</p>
+
+<p>
+  <strong>Resource type:</strong>
+  <%= @cdg_permission.resource_type %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @cdg_permission.is_active %>
+</p>
+
+<p>
+  <strong>Fk role agent:</strong>
+  <%= @cdg_permission.fk_role_agent %>
+</p>
+
+<p>
+  <strong>Fk function group resource:</strong>
+  <%= @cdg_permission.fk_function_group_resource %>
+</p>
+
+<p>
+  <strong>Fk nav menu item resource:</strong>
+  <%= @cdg_permission.fk_nav_menu_item_resource %>
+</p>
+
+<p>
+  <strong>Fk permission type:</strong>
+  <%= @cdg_permission.fk_permission_type %>
+</p>
+
+<%= link_to 'Edit', edit_cdg_permission_path(@cdg_permission) %> |
+<%= link_to 'Back', cdg_permissions_path %>

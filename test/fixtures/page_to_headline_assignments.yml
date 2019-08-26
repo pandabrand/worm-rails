@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  headline_sort_order: 1
+  cpkfk_headline: one
+  cpkfk_page_content: one
+
+two:
+  headline_sort_order: 1
+  cpkfk_headline: two
+  cpkfk_page_content: two

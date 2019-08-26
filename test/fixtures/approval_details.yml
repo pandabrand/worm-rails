@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fk_role: one
+  comments: MyText
+  date_created: 2019-06-12 22:08:27
+  fk_order: one
+  fk_order_item: one
+  fk_user: one
+  fk_work_activity_instance: one
+  media: one
+  order_number: MyString
+  status_description: MyString
+  user_name: MyString
+  user_role: MyString
+  fk_assistant: one
+
+two:
+  fk_role: two
+  comments: MyText
+  date_created: 2019-06-12 22:08:27
+  fk_order: two
+  fk_order_item: two
+  fk_user: two
+  fk_work_activity_instance: two
+  media: two
+  order_number: MyString
+  status_description: MyString
+  user_name: MyString
+  user_role: MyString
+  fk_assistant: two

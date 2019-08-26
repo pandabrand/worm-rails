@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_created: 2019-06-12 22:11:42
+  name: MyString
+  sort_order: 1
+  is_active: MyString
+
+two:
+  date_created: 2019-06-12 22:11:42
+  name: MyString
+  sort_order: 1
+  is_active: MyString

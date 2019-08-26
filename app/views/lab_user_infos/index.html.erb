@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lab User Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date created</th>
+      <th>Date modified</th>
+      <th>Is active</th>
+      <th>Name last</th>
+      <th>Name first</th>
+      <th>Alternate address 1</th>
+      <th>Alternate address 2</th>
+      <th>Alternate city</th>
+      <th>Alternate zip</th>
+      <th>Business fax</th>
+      <th>Business phone</th>
+      <th>Employee</th>
+      <th>Financial advisor</th>
+      <th>Fk alternate us state</th>
+      <th>Fk branch</th>
+      <th>Fk country</th>
+      <th>Fk title1</th>
+      <th>Fk title2</th>
+      <th>Fk region</th>
+      <th>Fk area</th>
+      <th>Assistant email</th>
+      <th>Fk roletitle</th>
+      <th>Fk client</th>
+      <th>Fktitle3id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lab_user_infos.each do |lab_user_info| %>
+      <tr>
+        <td><%= lab_user_info.date_created %></td>
+        <td><%= lab_user_info.date_modified %></td>
+        <td><%= lab_user_info.is_active %></td>
+        <td><%= lab_user_info.name_last %></td>
+        <td><%= lab_user_info.name_first %></td>
+        <td><%= lab_user_info.alternate_address_1 %></td>
+        <td><%= lab_user_info.alternate_address_2 %></td>
+        <td><%= lab_user_info.alternate_city %></td>
+        <td><%= lab_user_info.alternate_zip %></td>
+        <td><%= lab_user_info.business_fax %></td>
+        <td><%= lab_user_info.business_phone %></td>
+        <td><%= lab_user_info.employee %></td>
+        <td><%= lab_user_info.financial_advisor %></td>
+        <td><%= lab_user_info.fk_alternate_us_state %></td>
+        <td><%= lab_user_info.fk_branch %></td>
+        <td><%= lab_user_info.fk_country %></td>
+        <td><%= lab_user_info.fk_title1 %></td>
+        <td><%= lab_user_info.fk_title2 %></td>
+        <td><%= lab_user_info.fk_region %></td>
+        <td><%= lab_user_info.fk_area %></td>
+        <td><%= lab_user_info.assistant_email %></td>
+        <td><%= lab_user_info.fk_roletitle %></td>
+        <td><%= lab_user_info.fk_client %></td>
+        <td><%= lab_user_info.fkTitle3ID %></td>
+        <td><%= link_to 'Show', lab_user_info %></td>
+        <td><%= link_to 'Edit', edit_lab_user_info_path(lab_user_info) %></td>
+        <td><%= link_to 'Destroy', lab_user_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lab User Info', new_lab_user_info_path %>

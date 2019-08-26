@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Activity Participant Assignments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpkfk user</th>
+      <th>Cpkfk activity instance</th>
+      <th>Date created</th>
+      <th>Fk assistant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activity_participant_assignments.each do |activity_participant_assignment| %>
+      <tr>
+        <td><%= activity_participant_assignment.cpkfk_user %></td>
+        <td><%= activity_participant_assignment.cpkfk_activity_instance %></td>
+        <td><%= activity_participant_assignment.date_created %></td>
+        <td><%= activity_participant_assignment.fk_assistant %></td>
+        <td><%= link_to 'Show', activity_participant_assignment %></td>
+        <td><%= link_to 'Edit', edit_activity_participant_assignment_path(activity_participant_assignment) %></td>
+        <td><%= link_to 'Destroy', activity_participant_assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activity Participant Assignment', new_activity_participant_assignment_path %>

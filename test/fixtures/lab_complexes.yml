@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fk_area: one
+  is_active: MyString
+  name: MyString
+  area_name: MyString
+  complex: one
+
+two:
+  fk_area: two
+  is_active: MyString
+  name: MyString
+  area_name: MyString
+  complex: two

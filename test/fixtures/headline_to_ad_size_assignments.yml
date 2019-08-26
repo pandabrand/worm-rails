@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpkfk_ad_size: one
+  cpkfk_headline: one
+  is_active: MyString
+
+two:
+  cpkfk_ad_size: two
+  cpkfk_headline: two
+  is_active: MyString

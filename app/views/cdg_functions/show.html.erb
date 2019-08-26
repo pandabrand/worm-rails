@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @cdg_function.sort_order %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cdg_function.name %>
+</p>
+
+<%= link_to 'Edit', edit_cdg_function_path(@cdg_function) %> |
+<%= link_to 'Back', cdg_functions_path %>

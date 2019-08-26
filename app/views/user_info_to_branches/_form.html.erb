@@ -1,0 +1,27 @@
+<%= form_with(model: user_info_to_branch, local: true) do |form| %>
+  <% if user_info_to_branch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_info_to_branch.errors.count, "error") %> prohibited this user_info_to_branch from being saved:</h2>
+
+      <ul>
+      <% user_info_to_branch.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpkfk_branch_id %>
+    <%= form.text_field :cpkfk_branch_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpkfk_user_info_id %>
+    <%= form.text_field :cpkfk_user_info_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
