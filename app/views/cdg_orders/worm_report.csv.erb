@@ -1,5 +1,5 @@
-<%- headers = ['Order ID', 'Status'] -%>
+<%- headers = ['Order ID', 'Status', 'Record Date', 'ERA Tracking Id', 'Index File Name'] -%>
 <%= CSV.generate_line headers %>
 <%- @cdg_orders.each do |order| -%>
-<%= CSV.generate_line([order.pk_id, order.worm_status]) -%>
+<%= CSV.generate_line([order.pk_id, order.worm.status, order.date_submitted, order.worm.tracking_id, order.worm.ind_file]) -%>
 <%- end -%>

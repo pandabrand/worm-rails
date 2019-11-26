@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= @notice %></p>
 
 <h1>Cdg Orders</h1>
 
@@ -6,16 +6,14 @@
 <div><%= link_to 'Download CSV list', action: "csv_reports" %>
 </div>
 <%= will_paginate @cdg_orders %>
-<table>
+<table class="cdg_order_table">
   <thead>
     <tr>
       <th>Order ID</th>
       <th>Status</th>
       <th>WORM Status</th>
-      <th>File</th>
-      <th>ARF</th>
-      <th>WORM File</th>
-      <th>ARF WORM File</th>
+      <th>Action</th>
+      <th>WORM Package</th>
     </tr>
   </thead>
 
@@ -24,11 +22,9 @@
       <tr>
         <td><%= cdg_order.pk_id %></td>
         <td><%= cdg_order.cdg_order_status.nil? ? '' : cdg_order.cdg_order_status.name %></td>
-        <td><%= cdg_order.worm_status %></td>
-        <td><%= link_to 'File', cdg_order_path(cdg_order, :format => :xml) %></td>
-        <td><%= link_to 'ARF', :action => 'arf', :controller => 'cdg_orders', :id => cdg_order.id, :format => :pdf %></td>
-        <td><%= link_to 'WORM', cdg_order_path(cdg_order, :format => :xml) %></td>
-        <td><%= link_to 'ARF WORM', :action => 'arf', :controller => 'cdg_orders', :id => cdg_order.id, :format => :xml %></td>
+        <td><%= cdg_order.worm_status.nil? ? '' : cdg_order.worm_status %></td>
+        <td><%= link_to 'Create package', cdg_order_path(cdg_order, :format => :html) %></td>
+        <td class="<%= cdg_order.drop_files.empty? ? 'empty' : 'created' %>"><%= cdg_order.drop_files.empty? ? 'Not Created' : 'Created' %></td>
       </tr>
     <% end %>
   </tbody>

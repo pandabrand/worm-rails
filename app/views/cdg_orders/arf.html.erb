@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -124,13 +125,130 @@
 			<div class="subheader">
 				1. Advertising Request
 			</div>
+
+			<table class="grey">
+				<tr>
+					<td>
+						<div class="label">
+							Date of Request:
+						</div>
+						<%= @cdg_order.date_submitted.strftime '%Y-%m-%d' %>
+					</td>
+					<td>
+						<div class="label">
+							Office or Department Name/Number:
+						</div>
+						<%= @cdg_order.lab_branch.branch_id %>
+					</td>
+					<td>
+						<div class="label">
+							First Level Approver:
+						</div>
+						<%= @cdg_order.first_level_approval.user_name %>
+					</td>
+					<td>
+						<div class="label">
+							Date Approved:
+						</div>
+						<%= @cdg_order.first_level_approval.ilm_rec_dt %>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<div class="label">
+							Subject/Headline:
+						</div>
+						<%= @cdg_order.cdg_template.headline.code_color_title %>
+					</td>
+					<td>
+						<div class="label">
+							Date(s) to Run:
+						</div>
+						<%= @cdg_order.run_date.strftime '%Y-%m-%d' %>
+						<% unless @cdg_order.additional_run_dates.empty? %>
+							<br/>
+							<% @cdg_order.additional_run_dates.each do |date| %>
+								<%= date.strftime '%y-%m-%d' %><br/>
+							<% end %>
+						<% end %>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<div class="label">
+							Name of Media:
+						</div>
+						<%= @cdg_order.publication_name %>
+					</td>
+					<td>
+						<div class="label">
+							Approximate Media Expense:
+						</div>
+						<%= number_to_currency(@cdg_order.cost, unit: '$') %>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="label">
+							FA Website(URL)
+						</div>
+						<%= @cdg_order.faURL %>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="next">FA#: <%= @cdg_order.creator.lab_user_info.employee_id %></div>
+						<div class="next">Financial Advisor's Name: <%= @cdg_order.creator.lab_user_info.full_name %></div>
+						<div class="next">Financial Advisor's Tel #: <%= @cdg_order.creator.lab_user_info.business_phone %></div>
+						<div class="next">Branch Approver's Name: <%= @cdg_order.first_level_approval.user_name %></div>
+						<div class="next">Branch Approver's Tel #: <%= @cdg_order.first_level_approval.cdg_user.lab_user_info.business_phone %></div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="label">Order#</div>
+						<%= @cdg_order.pk_id %>
+					</td>
+				</tr>
+			</table>
 			<div class="subheader">
 				<span class="subheadmajor">2. Branch Approvals </span><span class="subheadminor">(Sr. CSM or Sr. CRO for Print and Media Managers for Web Banners)</span>
 			</div>
-
+			<table class="white">
+				<tr>
+					<td>
+						<div class="label">
+							First Level Approver:
+						</div>
+						<%= @cdg_order.first_level_approval.user_name %>
+					</td>
+					<td>
+						<div class="label">
+							Date Approved:
+						</div>
+						<%= @cdg_order.first_level_approval.ilm_rec_dt %>
+					</td>
+				</tr>
+			</table>
 			<div class="subheader">
 				<span class="subheadmajor">3. Region Approvals </span><span class="subheadminor">(RBSO and RRO for Print and Sr. CSM or Sr. CRO for Web Banners)</span>
 			</div>
+			<table class="white">
+				<tr>
+					<td>
+						<div class="label">
+							Second Level Approver:
+						</div>
+						<%= @cdg_order.second_level_approval.user_name %>
+					</td>
+					<td>
+						<div class="label">
+							Date Approved:
+						</div>
+						<%= @cdg_order.second_level_approval.ilm_rec_dt %>
+					</td>
+				</tr>
+			</table>
 			<div>
 				Please retain a copy of the approved ARF along with a copy of the final ad for branch records.
 			</div>

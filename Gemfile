@@ -42,6 +42,7 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'csv'
+gem 'rubyzip'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

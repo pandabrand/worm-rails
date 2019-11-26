@@ -1,3 +1,21 @@
 // Place all the styles related to the CdgOrders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.empty {
+  color: red;
+}
+
+.created {
+  color: forestgreen;
+}
+
+#notice {
+  font-weight: bold;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.cdg_order_table {
+  width: fill-available;
+  width: -webkit-fill-available;
+}

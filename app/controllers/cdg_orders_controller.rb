@@ -1,3 +1,5 @@
+require 'zip'
+
 class CdgOrdersController < ApplicationController
   before_action :set_cdg_order, only: [:show, :edit, :update, :destroy]
 
@@ -5,6 +7,7 @@ class CdgOrdersController < ApplicationController
   # GET /cdg_orders.json
   def index
     @cdg_orders = CdgOrder.paginate(page: params[:page])
+    @notice = params[:notice]
   end
 
   # GET /cdg_orders/1
@@ -12,7 +15,10 @@ class CdgOrdersController < ApplicationController
   # GET /cdg_orders/1.xml
   def show
     respond_to do |format|
-      format.html
+      format.html do
+        gather_and_compress_order(@cdg_order)
+        redirect_to action: :index, notice: 'files created and zipped.'
+      end
       format.json
       format.xml do
         stream = render_to_string(template: 'cdg_orders/show')
@@ -24,16 +30,56 @@ class CdgOrdersController < ApplicationController
   # GET /arfs/1
   def arf
     @cdg_order = CdgOrder.find(params[:id])
+    @name = @cdg_order.worm_name_resource
     respond_to do |format|
       format.pdf do
         pdf = render_to_string pdf: "ARF_#{@cdg_order.pk_id}.pdf", template: "cdg_orders/arf.html", encoding: "UTF-8"
-        send_data pdf, filename: "ARF_#{@cdg_order.worm_name_resource}.pdf"
+        File.open("public/#{@name}.pdf", 'wb') do|f|
+          f.write(pdf)
+        end
+        send_data pdf, filename: "ARF_#{@name}.pdf"
       end
       format.xml do
         stream = render_to_string(template: 'cdg_orders/show_arf')
         send_data stream, filename: "ARF_#{@cdg_order.worm_name_resource}_ind.xml"
       end
     end
+  end
+
+  def gather_and_compress_order(order)
+    @cdg_order = order
+    dir = "public/drop/#{@cdg_order.pk_id}"
+    FileUtils.mkdir(dir) unless File.exist? dir
+
+    name = @cdg_order.worm_name_resource
+    arf = render_to_string pdf: "ARF_#{@cdg_order.pk_id}.pdf", template: "cdg_orders/arf.html", encoding: "UTF-8"
+    arf_xml = render_to_string(template: 'cdg_orders/show_arf.xml.builder')
+    order_xml = render_to_string(template: 'cdg_orders/show.xml.builder')
+
+    FileUtils.cp @cdg_order.pickup_file, "#{dir}/#{@cdg_order.filename}"
+
+    File.open("#{dir}/ARF_#{name}.pdf", 'wb') do |f|
+      f.write(arf)
+    end
+
+    File.open("#{dir}/ARF_#{name}_ind.xml", 'w') do |f|
+      f.write(arf_xml)
+    end
+
+    File.open("#{dir}/#{name}_ind.xml", 'w') do |f|
+      f.write(order_xml)
+    end
+
+    input_filenames = Dir.glob("#{dir}/*.{xml,pdf,gif}")
+    zipfile_name = "#{dir}/#{name}.zip"
+
+    Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
+      input_filenames.each do |filepath|
+        filename = File.basename filepath
+        zipfile.add(filename, filepath)
+      end
+    end
+    FileUtils.rm input_filenames
   end
 
   def csv_reports
@@ -49,12 +95,28 @@ class CdgOrdersController < ApplicationController
   def ingest_worm_reports
     Dir.glob('public/reports/*.xml').each do |xml_file|
       doc = Nokogiri::XML(strip(xml_file))
-      sname = doc.css('response SNAME').first.content.split('-')
-      order_id = sname.last.strip
-      status = doc.css('response METASTATUS').first.content
-      order = CdgOrder.find(order_id)
-      order.update(worm_status: status)
-      File.delete xml_file
+      sname_arr = doc.css('response SNAME').first.content.split('-')
+      attr = {
+        sname: doc.css('response SNAME').first.content,
+        sid: doc.css('response SID').first.content,
+        ind_file: doc.css('response REQFILEPATH').first.nil? ? '' : doc.css('response REQFILEPATH').first.content,
+        status: doc.css('response METASTATUS').first.nil? ? '' : doc.css('response METASTATUS').first.content,
+        result: doc.css('response RESULT').first.nil? ? '' : doc.css('response RESULT').first.content,
+        tracking_id: doc.css('response TRACKING_ID').first.nil? ? '' : doc.css('response TRACKING_ID').first.content,
+        error_code: doc.css('response ERROR_CODE').first.nil? ? '' : doc.css('response ERROR_CODE').first.content,
+        oid: doc.css('response OID').first.nil? ? '' : doc.css('response OID').first.content,
+        oname: sname_arr.length > 1 ? sname_arr.first.strip : ''
+      }
+      order_id = sname_arr.length > 1 ? sname_arr.last.strip : ''
+      unless order_id.blank?
+        order = CdgOrder.find(order_id)
+        if order.worm.nil?
+          order.create_worm(attr)
+        else
+          order.worm.update(attr)
+        end
+        File.delete xml_file
+      end
     end
     respond_to do |format|
       format.html { redirect_to action: :index, notice: 'reports read.' }

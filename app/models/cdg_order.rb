@@ -8,6 +8,8 @@ class CdgOrder < ApplicationRecord
   belongs_to :lab_region, class_name: 'LabRegion', foreign_key: 'fk_region_id'
   belongs_to :lab_branch, class_name: 'LabBranch', foreign_key: 'fk_branch_id'
   has_many :approval_details, foreign_key: 'fk_order_id'
+  has_many :additional_run_dates, foreign_key: 'fk_order_id'
+  has_one :worm
 
   def ad_type
     publication_type.name == 'Website' ? 'Digital Ad' : 'Print Ad'
@@ -21,12 +23,26 @@ class CdgOrder < ApplicationRecord
     approval_details.sort_by(&:date_created).last
   end
 
+  def first_level_approval
+    approvals = approval_details.select { |hash| hash[:user_role] == 'Branch Manager' }
+    approvals.sort_by(&:status_description).first
+  end
+
+  def second_level_approval
+    approvals = approval_details.select { |hash| hash[:user_role] != 'Branch Manager' }
+    approvals.sort_by(&:status_description).first
+  end
+
   def hi_res_parts
     hi_res_uri.blank? ? [] : hi_res_uri.split('\\\\')
   end
 
   def filename
     hi_res_parts.last
+  end
+
+  def pickup_file
+    "public/pickup/#{filename}"
   end
 
   def extname
@@ -39,6 +55,14 @@ class CdgOrder < ApplicationRecord
 
   def worm_name_resource
     "#{file_prefix}_#{pk_id}_#{rec_date}"
+  end
+
+  def drop_path
+    "public/drop/#{pk_id}"
+  end
+
+  def drop_files
+    Dir.glob("#{drop_path}/*.zip")
   end
 
   def ilm_desc
