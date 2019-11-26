@@ -69,17 +69,6 @@ class CdgOrdersController < ApplicationController
     File.open("#{dir}/#{name}_ind.xml", 'w') do |f|
       f.write(order_xml)
     end
-
-    input_filenames = Dir.glob("#{dir}/*.{xml,pdf,gif}")
-    zipfile_name = "#{dir}/#{name}.zip"
-
-    Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
-      input_filenames.each do |filepath|
-        filename = File.basename filepath
-        zipfile.add(filename, filepath)
-      end
-    end
-    FileUtils.rm input_filenames
   end
 
   def csv_reports
