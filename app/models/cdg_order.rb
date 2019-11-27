@@ -62,7 +62,7 @@ class CdgOrder < ApplicationRecord
   end
 
   def drop_files
-    Dir.glob("#{drop_path}/*.zip")
+    Dir.glob("#{drop_path}/*.{pdf,gif,xml}")
   end
 
   def ilm_desc

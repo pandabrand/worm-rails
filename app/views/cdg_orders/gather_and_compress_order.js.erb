@@ -1,0 +1,4 @@
+var selector = '#cd_' + <%= @cdg_order.pk_id %>;
+var inner = '<%= j render(partial: 'order', object: @cdg_order, as: :cdg_order) %>';
+console.log(inner);
+Rails.$(selector)[0].innerHTML = inner;

@@ -10,22 +10,15 @@
   <thead>
     <tr>
       <th>Order ID</th>
+      <th>Creator</th>
+      <th>Date Created</th>
       <th>Status</th>
       <th>WORM Status</th>
-      <th>Action</th>
       <th>WORM Package</th>
+      <th>Action</th>
     </tr>
   </thead>
-
   <tbody>
-    <% @cdg_orders.each do |cdg_order| %>
-      <tr>
-        <td><%= cdg_order.pk_id %></td>
-        <td><%= cdg_order.cdg_order_status.nil? ? '' : cdg_order.cdg_order_status.name %></td>
-        <td><%= cdg_order.worm_status.nil? ? '' : cdg_order.worm_status %></td>
-        <td><%= link_to 'Create package', cdg_order_path(cdg_order, :format => :html) %></td>
-        <td class="<%= cdg_order.drop_files.empty? ? 'empty' : 'created' %>"><%= cdg_order.drop_files.empty? ? 'Not Created' : 'Created' %></td>
-      </tr>
-    <% end %>
+    <%= render partial: "orders", collection: @cdg_orders, as: :cdg_order %>
   </tbody>
 </table>

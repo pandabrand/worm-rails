@@ -18,6 +18,10 @@
 .cdg_order_table {
   width: fill-available;
   width: -webkit-fill-available;
+
+  td {
+    text-align: center;
+  }
 }
 
 .pagination {

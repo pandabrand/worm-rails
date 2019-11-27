@@ -1,5 +1,3 @@
-require 'zip'
-
 class CdgOrdersController < ApplicationController
   before_action :set_cdg_order, only: [:show, :edit, :update, :destroy]
 
@@ -14,11 +12,18 @@ class CdgOrdersController < ApplicationController
   # GET /cdg_orders/1.json
   # GET /cdg_orders/1.xml
   def show
+    begin
+      gather_and_compress_order(@cdg_order)
+    rescue StandardError => exception
+      Worm.create(
+        cdg_order_id: @cdg_order.pk_id,
+        status: 'Failed',
+        result: 'gather materials failed',
+        error_code: exception
+      )
+    end
     respond_to do |format|
-      format.html do
-        gather_and_compress_order(@cdg_order)
-        redirect_to action: :index, notice: 'files created and zipped.'
-      end
+      format.html
       format.json
       format.xml do
         stream = render_to_string(template: 'cdg_orders/show')
@@ -46,28 +51,40 @@ class CdgOrdersController < ApplicationController
     end
   end
 
-  def gather_and_compress_order(order)
-    @cdg_order = order
+  def gather_and_compress_order()
+    @cdg_order = CdgOrder.find(params[:id])
     dir = "public/drop/#{@cdg_order.pk_id}"
     FileUtils.mkdir(dir) unless File.exist? dir
 
     name = @cdg_order.worm_name_resource
-    arf = render_to_string pdf: "ARF_#{@cdg_order.pk_id}.pdf", template: "cdg_orders/arf.html", encoding: "UTF-8"
-    arf_xml = render_to_string(template: 'cdg_orders/show_arf.xml.builder')
-    order_xml = render_to_string(template: 'cdg_orders/show.xml.builder')
+    begin
+      arf = render_to_string pdf: "ARF_#{@cdg_order.pk_id}.pdf", template: "cdg_orders/arf.html", encoding: "UTF-8"
+      arf_xml = render_to_string(template: 'cdg_orders/show_arf.xml.builder')
+      order_xml = render_to_string(template: 'cdg_orders/show.xml.builder')
 
-    FileUtils.cp @cdg_order.pickup_file, "#{dir}/#{@cdg_order.filename}"
+      FileUtils.cp @cdg_order.pickup_file, "#{dir}/#{@cdg_order.filename}"
 
-    File.open("#{dir}/ARF_#{name}.pdf", 'wb') do |f|
-      f.write(arf)
+      File.open("#{dir}/ARF_#{name}.pdf", 'wb') do |f|
+        f.write(arf)
+      end
+
+      File.open("#{dir}/ARF_#{name}_ind.xml", 'w') do |f|
+        f.write(arf_xml)
+      end
+
+      File.open("#{dir}/#{name}_ind.xml", 'w') do |f|
+        f.write(order_xml)
+      end
+    rescue StandardError => exception
+      Worm.find_or_create_by(cdg_order: @cdg_order) do |worm|
+        worm.status = 'Failed'
+        worm.result = 'gather materials failed'
+        worm.error_code = exception
+      end
     end
-
-    File.open("#{dir}/ARF_#{name}_ind.xml", 'w') do |f|
-      f.write(arf_xml)
-    end
-
-    File.open("#{dir}/#{name}_ind.xml", 'w') do |f|
-      f.write(order_xml)
+    # render partial: "order", collection: @cdg_orders, as: :cdg_order
+    respond_to do |format|
+      format.js
     end
   end
 

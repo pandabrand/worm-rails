@@ -89,5 +89,6 @@ Rails.application.routes.draw do
   get 'arfs/:id', action: :arf, controller: 'cdg_orders'
   get 'ingest_reports', action: :ingest_worm_reports, controller: 'cdg_orders'
   get 'generate_report', action: :csv_reports, controller: 'cdg_orders', defaults: { format: 'csv' }
+  get 'create_package', action: :gather_and_compress_order, controller: 'cdg_orders'
   get '/', to: redirect('/cdg_orders')
 end
