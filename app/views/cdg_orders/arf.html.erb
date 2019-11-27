@@ -138,13 +138,13 @@
 						<div class="label">
 							Office or Department Name/Number:
 						</div>
-						<%= @cdg_order.lab_branch.branch_id %>
+						<%= @cdg_order&.lab_branch.branch_id %>
 					</td>
 					<td>
 						<div class="label">
 							First Level Approver:
 						</div>
-						<%= @cdg_order.first_level_approval.user_name %>
+						<%= @cdg_order&.first_level_approval.user_name %>
 					</td>
 					<td>
 						<div class="label">
@@ -158,13 +158,13 @@
 						<div class="label">
 							Subject/Headline:
 						</div>
-						<%= @cdg_order.cdg_template.headline.code_color_title %>
+						<%= @cdg_order&.cdg_template&.headline.code_color_title %>
 					</td>
 					<td>
 						<div class="label">
 							Date(s) to Run:
 						</div>
-						<%= @cdg_order.run_date.strftime '%Y-%m-%d' %>
+						<%= @cdg_order&.run_date.strftime '%Y-%m-%d' %>
 						<% unless @cdg_order.additional_run_dates.empty? %>
 							<br/>
 							<% @cdg_order.additional_run_dates.each do |date| %>
@@ -197,11 +197,11 @@
 				</tr>
 				<tr>
 					<td colspan="4">
-						<div class="next">FA#: <%= @cdg_order.creator.lab_user_info.employee_id %></div>
-						<div class="next">Financial Advisor's Name: <%= @cdg_order.creator.lab_user_info.full_name %></div>
-						<div class="next">Financial Advisor's Tel #: <%= @cdg_order.creator.lab_user_info.business_phone %></div>
-						<div class="next">Branch Approver's Name: <%= @cdg_order.first_level_approval.user_name %></div>
-						<div class="next">Branch Approver's Tel #: <%= @cdg_order.first_level_approval.cdg_user.lab_user_info.business_phone %></div>
+						<div class="next">FA#: <%= @cdg_order&.creator&.lab_user_info.employee_id %></div>
+						<div class="next">Financial Advisor's Name: <%= @cdg_order&.creator&.lab_user_info.full_name %></div>
+						<div class="next">Financial Advisor's Tel #: <%= @cdg_order&.creator&.lab_user_info.business_phone %></div>
+						<div class="next">Branch Approver's Name: <%= @cdg_order&.first_level_approval.user_name %></div>
+						<div class="next">Branch Approver's Tel #: <%= @cdg_order&.first_level_approval&.cdg_user&.lab_user_info.business_phone %></div>
 					</td>
 				</tr>
 				<tr>
@@ -220,13 +220,13 @@
 						<div class="label">
 							First Level Approver:
 						</div>
-						<%= @cdg_order.first_level_approval.user_name %>
+						<%= @cdg_order&.first_level_approval.user_name %>
 					</td>
 					<td>
 						<div class="label">
 							Date Approved:
 						</div>
-						<%= @cdg_order.first_level_approval.ilm_rec_dt %>
+						<%= @cdg_order&.first_level_approval.ilm_rec_dt %>
 					</td>
 				</tr>
 			</table>
@@ -239,13 +239,13 @@
 						<div class="label">
 							Second Level Approver:
 						</div>
-						<%= @cdg_order.second_level_approval.user_name %>
+						<%= @cdg_order&.second_level_approval.user_name %>
 					</td>
 					<td>
 						<div class="label">
 							Date Approved:
 						</div>
-						<%= @cdg_order.second_level_approval.ilm_rec_dt %>
+						<%= @cdg_order&.second_level_approval.ilm_rec_dt %>
 					</td>
 				</tr>
 			</table>
