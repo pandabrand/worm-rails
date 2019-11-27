@@ -1,5 +1,5 @@
       <td><%= cdg_order.pk_id %></td>
-      <td><%= cdg_order.creator.lab_user_info.full_name %></td>
+      <td><%= cdg_order&.creator&.lab_user_info.full_name %></td>
       <td><%= cdg_order.date_created.strftime '%Y-%m-%d' %></td>
       <td><%= cdg_order.cdg_order_status.nil? ? '' : cdg_order.cdg_order_status.name %></td>
       <td><%= cdg_order.worm.nil? ? '' : cdg_order.worm.status %></td>
