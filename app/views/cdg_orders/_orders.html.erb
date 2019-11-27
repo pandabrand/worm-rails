@@ -3,7 +3,7 @@
       <td><%= cdg_order&.creator&.lab_user_info&.full_name %></td>
       <td><%= cdg_order.date_created.strftime '%Y-%m-%d' %></td>
       <td><%= cdg_order.cdg_order_status.nil? ? '' : cdg_order.cdg_order_status.name %></td>
-      <td><%= cdg_order.worm.nil? ? '' : cdg_order.worm.status %></td>
+      <td><%= cdg_order.worm_status.nil? ? '' : cdg_order.worm_status %></td>
       <td class="<%= cdg_order.drop_files.empty? ? 'empty' : 'created' %>"><%= cdg_order.drop_files.empty? ? 'Not Created' : 'Created' %></td>
       <td><%= link_to 'Create package', controller: 'cdg_orders', action: 'gather_and_compress_order', id: cdg_order, remote: true %></td>
     </tr>

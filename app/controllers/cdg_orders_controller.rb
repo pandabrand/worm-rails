@@ -76,11 +76,10 @@ class CdgOrdersController < ApplicationController
         f.write(order_xml)
       end
     rescue StandardError => exception
-      Worm.find_or_create_by(cdg_order: @cdg_order) do |worm|
-        worm.status = 'Failed'
-        worm.result = 'gather materials failed'
-        worm.error_code = exception
-      end
+      cdg_order.worm_status = 'Failed'
+      p exception
+    else
+      cdg_order.worm_status = 'Success'
     end
     # render partial: "order", collection: @cdg_orders, as: :cdg_order
     respond_to do |format|
@@ -89,7 +88,7 @@ class CdgOrdersController < ApplicationController
   end
 
   def csv_reports
-    @cdg_orders = CdgOrder.where.not(worm_status: nil)
+    @cdg_orders = CdgOrder.includes(:worm).where.not(worm: { id:  nil })
     respond_to do |format|
       format.csv do
         csv = render_to_string template: 'cdg_orders/worm_report'
