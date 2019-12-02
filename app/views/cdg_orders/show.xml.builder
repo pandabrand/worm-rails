@@ -6,10 +6,10 @@ xml.SUBMISSION(
   'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance'
 ) do
   xml.SNAME @cdg_order.ad_type + ' - ' + @cdg_order.pk_id.to_s
-  xml.ILM_SUBMITTER 'zqadpato'
+  xml.ILM_SUBMITTER 'padpato'
   xml.OBJ do
     xml.ONAME @cdg_order.ad_type
-    xml.ILM_ORIGINATOR 'zqadpato'
+    xml.ILM_ORIGINATOR 'padpato'
     xml.ILM_EON_ID '24944'
     xml.ILM_RCC('code' => 'ENS150') do
       xml.ILM_ISO_COUNTRY 'USA'
@@ -42,6 +42,6 @@ xml.SUBMISSION(
       xml.METADATA({ 'field-name' => 'ILM_CONTACT_NM' }, @cdg_order.creator.lab_user_info.full_name)
       xml.METADATA({ 'field-name' => 'ILM_VEND_NM' }, 'AdBuilder')
     end
-    xml.DELIVERY('path' => "//v/region/na/appl/ilink/csm_net/data/era_qa/era_drop/LocalAdBuilder/#{@cdg_order.filename}")
+    xml.DELIVERY('path' => "//v/global/appl/ilink/era/data/dropzones/LocalAdBuilder/#{@cdg_order.filename}")
   end
 end
