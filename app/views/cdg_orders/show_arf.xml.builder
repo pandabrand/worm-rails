@@ -6,10 +6,10 @@ xml.SUBMISSION(
   'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance'
 ) do
   xml.SNAME 'ARF - ' + @cdg_order.pk_id.to_s
-  xml.ILM_SUBMITTER 'zqadpato'
+  xml.ILM_SUBMITTER 'padpato'
   xml.OBJ do
     xml.ONAME @cdg_order.ad_type
-    xml.ILM_ORIGINATOR 'zqadpato'
+    xml.ILM_ORIGINATOR 'padpato'
     xml.ILM_EON_ID '24944'
     xml.ILM_RCC('code' => 'ENS150') do
       xml.ILM_ISO_COUNTRY 'USA'
@@ -23,7 +23,7 @@ xml.SUBMISSION(
       xml.METADATA({ 'field-name' => 'ILM_OFFCL_REC' }, 'official')
       xml.METADATA({ 'field-name' => 'ILM_RCC' }, 'Public')
       xml.METADATA({ 'field-name' => 'ILM_MS_STATUS' }, @cdg_order.cdg_order_status.name)
-      xml.METADATA({ 'field-name' => 'ILM_ORIGINATOR' }, 'zqadpato')
+      xml.METADATA({ 'field-name' => 'ILM_ORIGINATOR' }, 'padpato')
       xml.METADATA({ 'field-name' => 'ILM_ACTIVE' }, 'inactive')
       # xml.METADATA({ 'field-name' => 'ILM_REC_DT' }, @cdg_order.approval.date_created)
       # xml.METADATA({ 'field-name' => 'ILM_SUB_DATE' }, @cdg_order.date_submitted)
@@ -42,6 +42,6 @@ xml.SUBMISSION(
       xml.METADATA({ 'field-name' => 'ILM_CONTACT_NM' }, @cdg_order.creator.lab_user_info.full_name)
       xml.METADATA({ 'field-name' => 'ILM_VEND_NM' }, 'AdBuilder')
     end
-    xml.DELIVERY('path' => "//v/region/na/appl/ilink/csm_net/data/era_qa/era_drop/LocalAdBuilder/ARF_#{@cdg_order.worm_name_resource}.pdf")
+    xml.DELIVERY('path' => "//v/global/appl/ilink/era/data/dropzones/LocalAdBuilder/ARF_#{@cdg_order.worm_name_resource}.pdf")
   end
 end
