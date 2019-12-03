@@ -31,7 +31,7 @@ xml.SUBMISSION(
       xml.METADATA({ 'field-name' => 'ILM_DESC' }, @cdg_order.ilm_desc)
       xml.METADATA({ 'field-name' => 'ILM_TRANS_TYPE' }, @cdg_order.ad_type)
       xml.METADATA({ 'field-name' => 'ILM_ACCT_NO' }, @cdg_order.pk_id)
-      xml.METADATA({ 'field-name' => 'ILM_AMOUNT' }, number_to_currency(@cdg_order.cost, unit: ''))
+      xml.METADATA({ 'field-name' => 'ILM_AMOUNT' }, number_to_currency(@cdg_order.cost, unit: '', delimiter: ''))
       unless @cdg_order.cdg_template.code.blank?
         xml.METADATA({ 'field-name' => 'ILM_DOCKET_NO' }, @cdg_order.cdg_template.code)
       end
