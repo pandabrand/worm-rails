@@ -40,7 +40,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'will_paginate', '~> 3.1.7'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
-gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+gem 'nokogiri', '~> 1.10'
 gem 'csv'
 gem 'rubyzip'
 
